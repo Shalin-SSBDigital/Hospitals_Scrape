@@ -1,0 +1,90 @@
+Code,FullForm
+BM,BM-Burns Managemnet
+CP,CP-Consultations & Procedures
+ER,ER-Emergency Room Packages (Care requiring less than 12 hrs stay)
+IA,IA-Name of Investigation
+IB,IB-Laboratory Medicine
+IC,IC-Nutritional Markers
+ID,ID-Infectious Diseases
+IE,IE-Hormones
+IF,"IF-USG, X - Ray, CT, MRI, Bone Densitometry"
+IG,IG-X - Ray
+IH,IH-X - Ray Contrast Studies
+II,II-Mammography
+IJ,IJ-CT
+IK,IK-MRI
+IL,IL-Bone Densitometry (Dexa Scan)
+IM,IM-Neurological investigations and procedures
+IMP,IMP-Implants
+IN,IN-Interventional Neuroradiology
+IO,IO-Tests in Gastro-enterology
+IP,IP-Tests in Endocrinology (In Addition to those included under Hormones)
+IQ,IQ-CSF
+JR,JR-Joint Replacement
+M1,M1-General Medicine
+M10,M10-OPD Diagnostic
+M2,M2-Paediatric medical management
+M3,M3-Neo-natal
+M4,M4-Paediatric cancer
+M5,M5-Medical Oncology
+M6,M6-Radiation Oncology
+M7,M7-Emergency Room Packages (Care requiring less than 12 hrs stay)
+M8,M8-Mental Disorders Packages
+MA,MA-Treatment Procedure Skin
+MB,MB-Biopsies
+MC,MC-Cardiology
+MD,MD-Treatment procedure ICU / CCU procedures (Special Care Cases)
+ME,ME-Treatment procedure Physiotherapy
+MF,MF-Nuclear Medicine / Brachytherapy - High Dose Radiation
+MG,MG-General Medicine
+MJ,MJ-Nuclear Medicine / Chemotherapy
+MK,MK-List of procedures / Tests in Gastroenterology / Endoscopic procedures
+MM,MM-Mental Disorders Packages
+MN,MN-Neo-natal care Packages
+MO,MO-Medical Oncology
+MP,MP-Paediatric Medical Management
+MQ,MQ-Nuclear Medicine / Radiotherapy and Chemotherapy
+MR,MR-Radiation Oncology
+NA,NA-Paediatric Cancer
+OA,OA-Others
+OC,"OC-OPD - Consultations, Procedures & Investigations"
+OT,OT-Organ & Tissue transplant
+PH,PH-Preventive Health Check Up
+S1,S1-General Surgery
+S10,S10-Plastic & reconstructive
+S11,S11-Burns management
+S12,S12-Cardiology
+S13,S13-Cardio-thoracic & Vascular surgery
+S14,S14-Paediatric surgery
+S15,S15-Surgical Oncology
+S16,S16-Oral and Maxillofacial Surgery
+S2,S2-Otorhinolaryngology
+S3,S3-Opthalmology
+S4,S4-Obstetrics & Gynaecology
+S5,S5-Orthopaedics
+S6,S6-Polytrauma
+S7,S7-Urology
+S8,S8-Neurosurgery
+S9,S9-Interventional Neuroradiology
+SA,SA-Treatment procedure Head & Neck
+SB,SB-Orthopaedics
+SC,SC-Surgical Oncology
+SD,SD-Treatment procedure Oesophagus
+SE,SE-Opthalmology
+SF,SF-Treatment procedure Abdomen / GI Surgery
+SG,SG-General Surgery
+SH,SH-Treatment Procedure Burns and Plastic Surgery
+SI,SI-Treatment Procedure Nephrology and Urology
+SJ,SJ-Head and Neck cancer
+SK,SK-Treatment Procedure Breast
+SL,SL-Otorhinolaryngology
+SM,SM-Oral and Maxillofacial Surgery
+SN,SN-Neurosurgery
+SO,SO-Obstetrics & Gynaecology
+SP,SP-Plastic & reconstructive Surgery
+SS,SS-Paediatric surgery
+ST,ST-Polytrauma
+SU,SU-Urology
+SV,SV-Cardio-thoracic & Vascular Surgery
+TG,TG-Gender Affirming Medical and Surgical Treatments
+UP,UP-Unspecified Package

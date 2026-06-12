@@ -1,0 +1,54 @@
+Code,FullForm
+M1.1,M1.1-General Medicine - Internal Medicine
+M1.2,M1.2-General Medicine - Family Medicine
+M2.1,M2.1-Paediatric medical management - General Paediatrics
+M2.2,M2.2-Paediatric medical management - Neonatology
+M3.1,M3.1-Neo-natal - Level 1
+M3.2,M3.2-Neo-natal - Level 2
+M3.3,M3.3-Neo-natal - Level 3
+S1.1,S1.1-General Surgery - Laparoscopic Surgery
+S1.2,S1.2-General Surgery - GI Surgery
+S1.3,S1.3-General Surgery - Endocrine Surgery
+S5.1,S5.1-Orthopaedics - Joint Replacement
+S5.2,S5.2-Orthopaedics - Spine Surgery
+S5.3,S5.3-Orthopaedics - Arthroscopy
+S5.4,S5.4-Orthopaedics - Trauma
+S12.1,S12.1-Cardiology - Interventional Cardiology
+S12.2,S12.2-Cardiology - Electrophysiology
+S12.3,S12.3-Cardiology - Paediatric Cardiology
+S7.1,S7.1-Urology - Endourology
+S7.2,S7.2-Urology - Uro-oncology
+S7.3,S7.3-Urology - Reconstructive Urology
+S8.1,S8.1-Neurosurgery - Spine
+S8.2,S8.2-Neurosurgery - Vascular
+S8.3,S8.3-Neurosurgery - Skull Base
+S3.1,S3.1-Opthalmology - Cataract
+S3.2,S3.2-Opthalmology - Retina
+S3.3,S3.3-Opthalmology - Glaucoma
+S3.4,S3.4-Opthalmology - Cornea
+S4.1,S4.1-Obstetrics & Gynaecology - High Risk Pregnancy
+S4.2,S4.2-Obstetrics & Gynaecology - Gynae Oncology
+S4.3,S4.3-Obstetrics & Gynaecology - Reproductive Medicine
+S2.1,S2.1-Otorhinolaryngology - Otology
+S2.2,S2.2-Otorhinolaryngology - Rhinology
+S2.3,S2.3-Otorhinolaryngology - Laryngology
+S13.1,S13.1-Cardio-thoracic & Vascular Surgery - Adult Cardiac Surgery
+S13.2,S13.2-Cardio-thoracic & Vascular Surgery - Paediatric Cardiac Surgery
+S13.3,S13.3-Cardio-thoracic & Vascular Surgery - Vascular Surgery
+S13.4,S13.4-Cardio-thoracic & Vascular Surgery - Thoracic Surgery
+S14.1,S14.1-Paediatric surgery - Neonatal Surgery
+S14.2,S14.2-Paediatric surgery - Paediatric Urology
+S15.1,S15.1-Surgical Oncology - Breast
+S15.2,S15.2-Surgical Oncology - GI
+S15.3,S15.3-Surgical Oncology - Head & Neck
+S15.4,S15.4-Surgical Oncology - Gynae
+S15.5,S15.5-Surgical Oncology - Uro
+S16.1,S16.1-Oral and Maxillofacial Surgery - Trauma
+S16.2,S16.2-Oral and Maxillofacial Surgery - Oncology
+S16.3,S16.3-Oral and Maxillofacial Surgery - Cleft
+M5.1,M5.1-Medical Oncology - Solid Tumours
+M5.2,M5.2-Medical Oncology - Haemato-Oncology
+M6.1,M6.1-Radiation Oncology - Teletherapy
+M6.2,M6.2-Radiation Oncology - Brachytherapy
+M4.1,M4.1-Paediatric cancer - Leukaemia
+M4.2,M4.2-Paediatric cancer - Solid Tumours

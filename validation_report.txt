@@ -1,0 +1,98 @@
+PMJAY Hospital Data Validation Report
+============================================================
+Input rows:        34,123
+Valid rows:        25,920
+Rejected rows:      8,203
+Rejection rate:  24.04%
+
+Top rejection reasons:
+   2,116  invalid_hospital_id_format
+   1,448  unknown_speciality_code(Procedures & Investigations)
+     942  duplicate_name_town_pin
+     907  unknown_category
+     686  unknown_sub_specialty_code(M1)
+     328  unknown_sub_specialty_code(MG)
+     309  unknown_sub_specialty_code(ER)
+     218  unknown_sub_specialty_code(SB)
+     192  pincode_state_mismatch(pin82,state'JHARKHAND')
+     171  unknown_sub_specialty_code(SU)
+     155  unknown_sub_specialty_code(BM)
+     153  unknown_sub_specialty_code(SO)
+     152  unknown_sub_specialty_code(MN)
+     147  unknown_sub_specialty_code(SG)
+     112  unknown_sub_specialty_code(S1)
+     108  unknown_sub_specialty_code(MC)
+     101  unknown_sub_specialty_code(S4)
+     100  pincode_state_mismatch(pin81,state'BIHAR')
+      96  unknown_sub_specialty_code(MP)
+      88  invalid_mobile
+
+Valid rows by state (top 15):
+   5,132  UTTAR PRADESH
+   3,554  KARNATAKA
+   2,488  ANDHRA PRADESH
+   2,194  TAMIL NADU
+   1,943  RAJASTHAN
+   1,870  MAHARASHTRA
+   1,608  TELANGANA
+   1,485  GUJARAT
+     920  BIHAR
+     871  HARYANA
+     825  MADHYA PRADESH
+     594  CHHATTISGARH
+     556  PUNJAB
+     395  KERALA
+     273  JHARKHAND
+
+First 50 rejected rows:
+------------------------------------------------------------
+  row   8401  HID='HOSP28G161896'  reasons=['duplicate_name_town_pin']
+  row   8405  HID='HOSP28G95513'  reasons=['invalid_email', 'invalid_nodal_email']
+  row   8419  HID='HOSP28G95527'  reasons=['invalid_email', 'invalid_nodal_email']
+  row   8433  HID='HOSP28G95546'  reasons=['invalid_email', 'invalid_nodal_email']
+  row   8458  HID='HOSP28G95575'  reasons=['invalid_email', 'invalid_nodal_email']
+  row   8477  HID='HOSP28G95605'  reasons=['invalid_email', 'invalid_nodal_email']
+  row   8505  HID='HOSP28G95658'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8516  HID='HOSP28G95688'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8517  HID='HOSP28G95689'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8587  HID='HOSP28G96001'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8588  HID='HOSP28G96002'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8589  HID='HOSP28G96003'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8591  HID='HOSP28G96005'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8592  HID='HOSP28G96006'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8593  HID='HOSP28G96007'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8595  HID='HOSP28G96011'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8596  HID='HOSP28G96012'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8597  HID='HOSP28G96014'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8598  HID='HOSP28G96015'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8599  HID='HOSP28G96016'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8600  HID='HOSP28G96017'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8601  HID='HOSP28G96018'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8604  HID='HOSP28G96023'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8605  HID='HOSP28G96024'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8606  HID='HOSP28G96025'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8607  HID='HOSP28G96026'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8608  HID='HOSP28G96027'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8609  HID='HOSP28G96028'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8610  HID='HOSP28G96029'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8611  HID='HOSP28G96030'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8612  HID='HOSP28G96031'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8613  HID='HOSP28G96032'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8614  HID='HOSP28G96034'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8615  HID='HOSP28G96035'  reasons=["pincode_state_mismatch(pin11,state'ANDHRA PRADESH')"]
+  row   8638  HID='HOSP28P129754'  reasons=['duplicate_name_town_pin']
+  row   8639  HID='HOSP28P129760'  reasons=['unknown_sub_specialty_code(CP)']
+  row   8641  HID='HOSP28P129879'  reasons=['unknown_sub_specialty_code(CP)']
+  row   8642  HID='HOSP28P130081'  reasons=['unknown_speciality_code(Procedures & Investigations)']
+  row   8645  HID='HOSP28P131309'  reasons=['unknown_speciality_code(Procedures & Investigations)']
+  row   8646  HID='HOSP28P132092'  reasons=['unknown_speciality_code(Procedures & Investigations)', 'unknown_sub_specialty_code(MO)']
+  row   8653  HID='HOSP28P141268'  reasons=['unknown_speciality_code(Procedures & Investigations)']
+  row   8660  HID='HOSP28P146254'  reasons=['unknown_speciality_code(Procedures & Investigations)']
+  row   8661  HID='HOSP28P146305'  reasons=['unknown_speciality_code(Procedures & Investigations)']
+  row   8662  HID='HOSP28P146495'  reasons=['unknown_speciality_code(Procedures & Investigations)']
+  row   8665  HID='HOSP28P150724'  reasons=['unknown_speciality_code(Procedures & Investigations)']
+  row   8666  HID='HOSP28P150899'  reasons=['unknown_speciality_code(Procedures & Investigations)']
+  row   8671  HID='HOSP28P159085'  reasons=['unknown_speciality_code(Procedures & Investigations)']
+  row   8673  HID='HOSP28P163116'  reasons=['unknown_speciality_code(Procedures & Investigations)']
+  row   8674  HID='HOSP28P163500'  reasons=['unknown_speciality_code(Procedures & Investigations)']
+  row   8675  HID='HOSP28P166076'  reasons=['unknown_speciality_code(Procedures & Investigations)']

@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+ 
+     
+
+
+<html lang="en">
+<head>
+<title>HEM Empanelled Hospitals</title>
+<meta
+	content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+	name='viewport' />
+<meta name="viewport" content="width=device-width" />
+<link rel="shortcut icon"
+	href="images/NPHS_logo_small.png">
+	
+	<script src="js/jquery-1.9.1.min.js"></script>
+	 <script type="text/javascript" src="js/patientscripts.js"></script>
+	  <link href="./bootstrap/bootstrap-reset.css" rel="stylesheet">
+	 
+         <script src="./vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+         <script src="js/jquery.msgBox.js" type="text/javascript"></script>
+         <link href="./vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+         <script src="bootstrap/js/bootstrap.min.js"></script>
+         <script src="bootstrap/js/bootbox.min.js"></script>
+            <link href="./bootstrap/table-responsive.css" rel="stylesheet" />
+             <link href="bootstrap/css/datepicker3.css" rel="stylesheet">
+             <script type="text/javascript"	src="bootstrap/js/bootstrap-datepicker.js"></script>
+         
+          <!-- Font Awesome -->
+    <link href="./vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/select2.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="css/themes/default/custom.min.css" rel="stylesheet" type="text/css" media="screen">
+      <link href="css/themes/default/fieldset.css" rel="stylesheet">
+      <style>
+      body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    }
+      .navbar1 {
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+        margin-bottom: 0;
+    border-radius: 0;
+    background: #f3f3f3;
+    min-height: 30px;
+    }
+    .panel-heading1 {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    }
+    .marquee1 {
+    background: /*#FFC107*/ #ffffff;
+    font-size: 14px;
+    color: #259761;
+    padding: 6px;
+    margin-bottom: 10px;
+    border: 0px solid #dad5d5;
+}
+.input-sm1 {
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+    footer {
+    background-color: #584742;
+    padding: 5px;
+    color: #f1f1f1;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+    
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+      .margin-bottom-0 {
+    margin-bottom: 0px;
+}
+      .form-control{
+    height:28px;
+    }
+    .select2-container--default .select2-selection--single, .select2-container--default .select2-selection--multiple {
+    min-height:28px;
+    }
+    .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left:18px;
+    }
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 28px;
+	}
+	.select2-container--default .select2-selection--single .select2-selection__arrow {
+    width: 14px;
+	}
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+   padding-top: 0px;
+	}
+	.img-center {
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+	#loader {
+  position: absolute;
+  left: 55%;
+  top: 40%;
+  z-index: 1;
+  width: 65px;
+  height: 65px;
+  margin: -75px 0 0 -75px;
+  border: 10px solid #FFFFFF;
+  border-right: 10px solid #4682B4;
+  border-bottom: 10px solid blue;
+  border-left: 10px solid #66CDAA;
+  border-radius: 50%;
+  border-top: 10px solid #3498db;
+  width: 65px;
+  height: 65px;
+  
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+.table-striped>tbody>tr:nth-of-type(even) {
+    background-color: rgba(244, 242, 242, 0.6705882352941176) !important;
+} 
+.table-striped > thead > tr > th{
+    font-weight:500 !important;
+}
+label
+{
+	
+	    font-size: 11px !important;
+}
+ 
+</style>
+	<script src="js/select2.min.js"></script>
+     <script type="text/javascript">
+   
+     $(document).ready(function(){
+    	
+    	   $('.panel-collapse')
+    	    .on('shown.bs.collapse', function() {
+    	        $(this)
+    	            .parent()
+    	            .find(".fa-plus-square")
+    	            .removeClass("fa-plus-square")
+    	            .addClass("fa-minus-square");
+    	        parent.resizeMiddleFrame();
+    	        })
+    	    .on('hidden.bs.collapse', function() {
+    	        $(this)
+    	            .parent()
+    	            .find(".fa-minus-square")
+    	            .removeClass("fa-minus-square")
+    	            .addClass("fa-plus-square");
+    	        }); 
+    	
+    	 
+   		 $("#searchState").select2();
+    	 $("#searchHospName").select2();
+    	 $("#searchDistrict").select2();
+    	 $("#searchHospType").select2();
+    	 $("#applicationStatus").select2();
+    	 $("#searchSpeciality").select2();
+    	 $("#empanelmentType").select2();
+    	 $("#searchBeds").select2();
+    	 $("#isRSBY").select2();
+    	 
+    	 $("#roleActionId").select2();
+    	 $("#actionRoleId").select2();
+    	 //$("#scheme").select2();
+		
+     });
+	 var today = new Date();
+	 var startDate = new Date('01/01/2012');
+	 var FromEndDate = new Date();
+	 var ToEndDate = new Date();
+ 	$(function() {
+ 		$( "#fromDate" ).datepicker({
+ 			defaultDate : "+1w",
+			endDate:today, 
+			autoclose : true,
+			todayHighlight : true,
+			format : 'dd-mm-yyyy',
+			clearBtn:true
+			
+			
+		}).on('changeDate', function(selected){
+	        startDate = new Date(selected.date.valueOf());
+	        startDate.setDate(startDate.getDate(new Date(selected.date.valueOf())));
+	        $('#toDate').datepicker('setStartDate', startDate);
+	    }); 
+		$( "#toDate" ).datepicker({
+			defaultDate : "+1w",
+			endDate:today, 
+			todayHighlight : true,
+			autoclose : true,
+			format : 'dd-mm-yyyy',
+			clearBtn:true
+		}).on('changeDate', function(selected){
+	        FromEndDate = new Date(selected.date.valueOf());
+	        FromEndDate.setDate(FromEndDate.getDate(new Date(selected.date.valueOf())));
+	        $('#fromDate').datepicker('setEndDate', FromEndDate);
+	    });
+	
+	});
+     function fn_load_image(){
+      	document.getElementById("loader").style.display = "";
+		document.getElementById("myDiv").style.display = "none";
+       }
+       function fn_removeLoadingImage()
+       {
+      
+     	  document.getElementById("loader").style.display = "none";
+      	 
+       
+     	document.getElementById("myDiv").style.display = "";
+       }
+
+       
+       var distVal = null;
+       var hospVal = null;
+       
+       function onloadFn(){
+    	
+		 distVal = '';
+		 hospVal = '';
+		 var disFlag='';
+		 var stateFlag='';
+		 if(disFlag!=null && disFlag!="" && disFlag=='Y')
+			 {
+			 $("#searchDistrict").attr("disabled", true);			
+			 }
+		 if(stateFlag!=null && stateFlag!="" && stateFlag=='Y')
+		 {
+			 $("#searchState").attr("disabled", true);
+		 }
+		 //alert('');
+		//alert('99');
+		//alert(document.forms[0].searchState.value);
+		
+    	   if(document.forms[0].searchState.value != null 
+    			   && document.forms[0].searchState.value != '-1'
+    			   && document.forms[0].searchState.value != 'NA'){
+    		   getDistrictList();
+    	   }
+    	  // alert("on "+distVal);
+       	var hType = 'PrivateP';
+       	if(hType != null && hType != '-1'){
+       	$("#searchHospType").select2('val',hType);
+       	}
+       	var hip = '';
+       	if(hip!=null && hip!=''){
+       		document.forms[0].searchHospInfoId.value=hip;
+       	}else{
+       		document.forms[0].searchHospInfoId.value=null;
+       	}
+       	
+       	fn_removeLoadingImage();
+       }
+       
+function fnSearch()
+{
+	
+/* 	if((document.getElementById("searchState").value == null || document.getElementById("searchState").value=="-1") && 
+			(document.getElementById("searchDistrict").value == null || document.getElementById("searchDistrict").value=="-1") && 
+			(document.getElementById("searchHospType").value == null || document.getElementById("searchHospType").value=="-1")  && 
+			(document.getElementById("searchSpeciality").value  == null || document.getElementById("searchSpeciality").value=="-1") && 
+			(document.getElementById("searchHospName").value == null || document.getElementById("searchHospName").value=="-1" ) ){
+
+			bootbox.alert("Please select any search criteria ");
+	        return false;
+			} */
+
+	
+		
+	var applSearch = '';
+	var appReadOnly = 'Y';
+	var draftMenu = '';
+	var invalidMenu = '';
+	if(applSearch == null || applSearch == ''){
+		applSearch = 'N';
+	}
+	if(draftMenu == null || draftMenu == ''){
+		draftMenu = 'N';
+	}
+	if(appReadOnly == null || appReadOnly == ''){
+		appReadOnly = 'N';
+	}
+	if(invalidMenu == null || invalidMenu == ''){
+		invalidMenu = 'N';
+	}
+/* 	alert("draftMenu"+draftMenu);
+	alert("applSearch"+applSearch);
+	alert("appReadOnly"+appReadOnly);
+ */
+ //alert(document.forms[0].searchSpeciality.value);
+ //alert(document.forms[0].searchBeds.value);
+
+	
+	
+  //  var hospName=document.forms[0].searchHospName.value;
+    var regFrom = null; var regTo = null;
+
+ 	var actionRoleId = null;var roleActionId = null;
+
+	fn_load_image();
+	//?actionFlag=ViewRegisteredHosptlsNew&&search=Y&applSearch="+applSearch+"&appReadOnly="+appReadOnly+"&draftMenu="+draftMenu;
+	var url="empnlWorkFlow.htm";
+	document.getElementById('actionFlag').value='ViewRegisteredHosptlsNew';
+	document.getElementById('search').value='Y';
+	document.getElementById('applSearch').value=applSearch;
+	document.getElementById('appReadOnly').value=appReadOnly;
+	document.getElementById('draftMenu').value=draftMenu;
+	document.forms[0].action=url;
+	document.forms[0].submit();
+}
+
+function fn_openExcel(){
+	
+	var applSearch = '';
+	var appReadOnly = 'Y';
+	var draftMenu = '';
+	var invalidMenu = '';
+	
+	if(applSearch == null || applSearch == ''){
+		applSearch = 'N';
+	}
+	if(draftMenu == null || draftMenu == ''){
+		draftMenu = 'N';
+	}
+	if(appReadOnly == null || appReadOnly == ''){
+		appReadOnly = 'N';
+	}
+	if(invalidMenu == null || invalidMenu == ''){
+		invalidMenu = 'N';
+	}
+	var url="empnlWorkFlow.htm?actionFlag=ViewRegisteredHosptlsNew&&search=Y&applSearch="+applSearch+"&appReadOnly="+appReadOnly+"&draftMenu="+draftMenu+"&invalidMenu="+invalidMenu;	
+		url=url+'&export=E';
+		document.forms[0].action=url;
+		document.forms[0].submit();
+	}
+
+function fnCompareDates(FromDate,ToDate)
+{
+    var FromDateVal;
+    var ToDateVal;
+    var k = FromDate.indexOf("-");
+    var t = FromDate.indexOf("-",3);  
+    FromDateVal = FromDate.substr(k+1,t-k-1)+"/"+FromDate.substr(0,k)+"/"+FromDate.substr(t+1,FromDate.length);
+  	k = ToDate.indexOf("-");
+    t = ToDate.indexOf("-",3);
+    ToDateVal = ToDate.substr(k+1,t-k-1)+"/"+ToDate.substr(0,k)+"/"+ToDate.substr(t+1,ToDate.length);
+	 if (Date.parse(FromDateVal) > Date.parse(ToDateVal))
+         {
+		 bootbox.alert("From Date should be less than To Date");
+     		return false; 
+          } 
+    else
+      return true;       
+}
+
+function fnMonthDiff(FromDate,ToDate)
+{
+    var FromDateVal;
+	var ToDateVal;            
+	var k = FromDate.indexOf("-");
+	var t = FromDate.indexOf("-",3);   
+	FromDateVal = FromDate.substr(k+1,t-k-1)+"/"+FromDate.substr(0,k)+"/"+FromDate.substr(t+1,t-1); 
+
+	var fromYear = parseInt(FromDate.substr(t+1,t-1));			
+	var fromMon = Number(FromDate.substr(k+1,t-k-1));
+	var fromDt=Number(FromDate.substr(0,k));	
+	k = ToDate.indexOf("-");
+	t = ToDate.indexOf("-",3);
+	ToDateVal = ToDate.substr(k+1,t-k-1) +"/"+ToDate.substr(0,k)+"/"+ToDate.substr(t+1,t-1);
+
+	var toYear = Number(ToDate.substr(t+1,t-1));
+	var toMon = Number(ToDate.substr(k+1,t-k-1));
+	var toDt=Number(ToDate.substr(0,k));
+	if(toYear == fromYear)
+	{				
+		if((toDt - fromDt >=0 && toMon - fromMon <= 2) || (toDt - fromDt <0 && toMon - fromMon <= 3))
+		{
+			return true;
+		}
+		else 
+		{   
+			bootbox.alert('Can not select more than 3 months difference');
+			return false;
+		}
+	}
+	else if(toYear > fromYear)
+	{
+		if((toDt - fromDt >=0 &&  fromMon - toMon >=10) || (toDt - fromDt <0 && fromMon - toMon >= 9))
+		{
+			return true;
+		}
+		else 
+		{  
+			bootbox.alert('Can not select more than 3 months difference');
+			return false;
+		}
+	}
+	else
+	{
+		bootbox.alert('Please select valid From and To Dates');
+		return false;
+	}
+}
+
+function fn_pagination(pageNo,actionType)
+{
+	var appReadOnly = 'Y';
+	fn_load_image();
+	var search = 'Y';
+	var applSearch='';
+	var draftMenu = '';
+	var invalidMenu = '';
+	//?actionFlag=ViewRegisteredHosptlsNew&pageNo="+pageNo+"&search="+search+"&applSearch="+applSearch+"&appReadOnly="+appReadOnly+"&draftMenu="+draftMenu;
+	var url="empnlWorkFlow.htm";
+	document.getElementById('actionFlag').value='ViewRegisteredHosptlsNew';
+	document.getElementById('pageNo').value=pageNo;
+	document.getElementById('search').value=search;
+	document.getElementById('applSearch').value=applSearch;
+	document.getElementById('appReadOnly').value=appReadOnly;
+	document.getElementById('draftMenu').value=draftMenu;
+	document.forms[0].action=url;
+	document.forms[0].submit();
+}
+
+function showPagination(num)
+{
+	document.forms[0].showPage.value=num; 
+	fn_pagination(1,num);
+	}
+function showinSetsOf(num)
+{
+	document.forms[0].rowsPerPage.value=num; 
+	document.forms[0].showPage.value='1'; 
+	fn_pagination(1,num);	
+}
+function validateDate(arg1,input)
+{
+	var entered = input.value;
+	entered = entered.split("-");
+	var byr = parseInt(entered[2]); 
+	if(isNaN(byr))
+	{
+		input.value="";
+		bootbox.alert("Please Select "+arg1);
+	}
+	else
+	{
+	var bmth = parseInt(entered[1],10); 
+	var bdy = parseInt(entered[0],10);
+	var DoB=""+(bmth)+"/"+ bdy +"/"+ byr;
+	DoB=Date.parse(DoB);
+	var today= new Date();
+	var nowmonth = today.getMonth();
+	var nowday = today.getDate();
+	var nowyear = today.getFullYear();
+	var DoC=""+(nowmonth+1)+"/"+ nowday +"/"+ nowyear;
+	DoC=Date.parse(DoC);
+	if(DoB>DoC)
+		{
+		input.value="";
+		bootbox.alert(arg1+" should not be greater than Today's Date");
+		}
+	}
+}
+
+function resetSearch()
+{
+	
+
+	 
+	$("#searchHospType").select2('val','-1');
+	$("#searchState").select2('val','-1');
+	$("#searchDistrict").select2('val','-1');
+	$("#empanelmentType").select2('val','-1');
+	
+
+	
+	if($("#searchSpeciality").length > 0){
+		 $("#searchSpeciality").select2('val','-1');
+		 }
+	
+
+		 
+	
+		 
+	 	 document.getElementById("searchHospInfoId").value="";
+		// document.getElementById("searchHospName").value="";
+		 var stateFlag='';
+		// alert(stateFlag);
+		 if(stateFlag!='Y' && stateFlag=="")
+		 {
+			 $("#searchState").select2('val','-1');
+		 document.getElementById("searchState").value="-1";
+		 }
+		 var disFlag='';
+		// alert(disFlag);
+		 if(disFlag!='Y' &&  disFlag=="")
+			 {
+			 $("#searchDistrict").select2('val','-1');
+		 document.getElementById("searchDistrict").value="-1";
+		 $("#serachHospName").select2('val','-1');
+		 document.getElementById("serachHospName").value="-1";
+			 }
+
+}
+function  refreshParentPage()
+{
+	window.close();
+}
+
+
+
+
+
+
+
+
+
+function viewPreviousPages(pageNo,noOfPages,selectedPage)
+{
+	var pageDisplays='';
+	var pageNoLim=pageNo;
+	var minPageNo=pageNo-10;
+	var action='link';
+	var i=0;
+	if(minPageNo>0)
+	{
+		pageDisplays=pageDisplays+'<a href="javascript:viewPreviousPages('+minPageNo+','+noOfPages+','+selectedPage+')">Previous</a>&nbsp;&nbsp;';
+	}
+	else
+	{
+		minPageNo=minPageNo+1;
+	}
+	for(i=minPageNo;i<pageNoLim;i++)
+	{
+		if(selectedPage==i)
+		{
+			pageDisplays=pageDisplays+''+i+'&nbsp;';
+		}
+		else
+		{
+			pageDisplays=pageDisplays+'<a href="javascript:fn_pagination('+i+',\''+action+'\')">'+i+'</a>&nbsp;&nbsp;';
+		}
+		
+	}
+	pageDisplays=pageDisplays+'<a href="javascript:viewNextPages('+i+','+noOfPages+','+selectedPage+')">Next</a>';
+	document.getElementById("pageNoDisplay").innerHTML=pageDisplays;
+}
+
+function viewNextPages(pageNo,noOfPages,selectedPage)
+{
+	var pageDisplays='';
+	var pageNoLim=pageNo+10;
+	var action='link';
+	var i=0;
+	if(pageNoLim>noOfPages)
+	{
+		pageNoLim=noOfPages+1;
+	}
+	pageDisplays=pageDisplays+'<a href="javascript:viewPreviousPages('+pageNo+','+noOfPages+','+selectedPage+')">Previous</a>&nbsp;&nbsp;';
+	for(i=pageNo;i<pageNoLim;i++)
+	{
+		if(selectedPage==i)
+		{
+			pageDisplays=pageDisplays+''+i+'&nbsp;';
+		}
+		else
+		{
+			pageDisplays=pageDisplays+'<a href="javascript:fn_pagination('+i+',\''+action+'\')">'+i+'</a>&nbsp;&nbsp;';
+		}
+		
+	}
+	if(i<noOfPages)
+	{
+		pageDisplays=pageDisplays+'<a href="javascript:viewNextPages('+i+','+noOfPages+','+selectedPage+')">Next</a>';
+	}
+	document.getElementById("pageNoDisplay").innerHTML=pageDisplays;
+}
+
+
+
+
+function getHospitalNamesList()
+{
+
+	//alert("hospname fn");
+	 $('#searchHospName').select2('val','-1');
+	 
+	 var specSearch = null;
+	var xmlhttp;
+	var url;
+	var stateId = $('#searchState').val();
+	var distCode = $('#searchDistrict').val();
+	var hospType = $('#searchHospType').val();
+	var hospSpec = $('#searchSpeciality').val();
+	var hospName = $('#searchHospName').val();
+	var empanelmentType =  $('#empanelmentType').val();
+	
+	//alert("distCode"+distCode+"hospType"+hospType+"hospSpec"+hospSpec+"hospName"+hospName);
+	if(hospSpec != null && hospSpec != "-1"){
+		specSearch = 'Y';
+	}else{
+		specSearch = 'N';
+	}
+	if (window.XMLHttpRequest) {
+		xmlhttp = new XMLHttpRequest();
+	} else if (window.ActiveXObject) {
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	} else {
+		alert("Your browser does not support XMLHTTP!");
+	}
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4) {
+			var resultArray = xmlhttp.responseText;
+			resultArray = resultArray.replace("*", "");
+			resultArray = resultArray.replace("[", "");
+			resultArray = resultArray.replace("]", "");
+			var hospNamesList = resultArray.split(",");
+
+			if (hospNamesList.length > 0) {
+
+				
+				document.forms[0].searchHospName.options.length=0;
+              document.forms[0].searchHospName.options[0]=new Option("---select---","");
+				for (var i = 0; i < hospNamesList.length; i++) {
+
+					var arr = hospNamesList[i].split("~");
+					if (arr[1] != null && arr[0] != null) {
+						var val1 = arr[1].replace(/^\s+|\s+$/g, "");
+						var val2 = arr[0].replace(/^\s+|\s+$/g, "");
+
+						document.forms[0].searchHospName.options[i + 1] = new Option(
+								val1, val2);
+
+					} 
+
+				}
+				
+				if(hospVal != null && hospVal != '-1' && hospVal != 'NA'){
+					//alert("in"+distVal);
+					$("#searchHospName").select2('val',hospVal);
+				}
+			
+			}
+
+		}
+	}
+	url = "empanelApplicationForm.htm?actionVal=GETHOSPNAMESLIST&stateId="+stateId+"&empanelmentType="+empanelmentType+"&distCode="+distCode+"&hospType="
+			+hospType+"&hospSpec="+hospSpec+"&hospName="+hospName+"&specSearch="+specSearch;
+	xmlhttp.open("Post", url, true);
+	xmlhttp.send(null);
+
+}
+
+function getDistrictList() {
+	//alert("districts onchange");
+	 $('#searchDistrict').select2('val','-1');
+	var xmlhttp;
+	var url;
+
+	var stateCode = $('#searchState').val();
+	if (window.XMLHttpRequest) {
+		xmlhttp = new XMLHttpRequest();
+	} else if (window.ActiveXObject) {
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	} else {
+		alert("Your browser does not support XMLHTTP!");
+	}
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4) {
+			var resultArray = xmlhttp.responseText;
+			resultArray = resultArray.replace("*", "");
+			resultArray = resultArray.replace("[", "");
+			resultArray = resultArray.replace("]", "");
+			var districtList = resultArray.split(",");
+
+			if (districtList.length > 0) {
+
+				
+				document.forms[0].searchDistrict.options.length=0;
+               document.forms[0].searchDistrict.options[0]=new Option("---select---","-1");
+				for (var i = 0; i < districtList.length; i++) {
+
+					var arr = districtList[i].split("~");
+					if (arr[1] != null && arr[0] != null) {
+						var val1 = arr[1].replace(/^\s+|\s+$/g, "");
+						var val2 = arr[0].replace(/^\s+|\s+$/g, "");
+
+						document.forms[0].searchDistrict.options[i + 1] = new Option(
+								val1, val2);
+
+					} else {
+						/* $('#district').empty();
+						$("#district").append('<option value="NA">------Select-----</option>'); */
+					}
+
+				}
+				
+				if(distVal != null && distVal != '-1' && distVal != 'NA'){
+					//alert("in"+distVal);
+					$("#searchDistrict").select2('val',distVal);
+				}
+			
+			}
+
+		}
+	}
+	url = "empanelApplicationForm.htm?actionVal=GETLOCATIONS&locType=DT&locVal="+stateCode;
+	var districtCode = $('#district').val();
+	xmlhttp.open("Post", url, true);
+	xmlhttp.send(null);
+}
+
+
+function stateSelected()
+{
+	var state=null;
+	var lStrHdrId='LH6';
+	state=document.getElementById("searchState").value;
+	var xmlhttp;
+    var url;
+
+    if (window.XMLHttpRequest)
+    {
+     xmlhttp=new XMLHttpRequest();
+    }
+    else if (window.ActiveXObject)
+    {		
+     xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    else
+    {
+    	jqueryInfoMsg('Ajax XMLHTTP Support',"Your browser does not support XMLHTTP!");
+    }
+  
+    xmlhttp.onreadystatechange=function()
+    {
+        if(xmlhttp.readyState==4)
+        {
+            var resultArray=xmlhttp.responseText;
+            if(resultArray.trim()=="SessionExpired*"){
+            	parent.sessionExpireyClose;
+            }
+            else
+            {
+            	if(resultArray!=null)
+            	{
+            		resultArray = resultArray.replace("[","");
+            		resultArray = resultArray.replace("]*","");            
+            		var districtList = resultArray.split(","); 
+            		if(districtList.length>0)
+            		{  
+            			document.forms[0].searchDistrict.options.length=0;
+            			document.forms[0].searchDistrict.options[0]=new Option("---select---","-1");
+            			for(var i = 0; i<districtList.length;i++)
+            			{	
+            				var arr=districtList[i].split("~");
+            				if(arr[1]!=null && arr[0]!=null)
+            				{
+            					var val1 = arr[1].replace(/^\s+|\s+$/g,"");
+            					var val2 = arr[0].replace(/^\s+|\s+$/g,"");
+            					document.forms[0].searchDistrict.options[i+1] =new Option(val1,val2);
+            				}
+            			}
+            		}
+            	}
+            }
+        }
+    }
+	url = "empnlWorkFlow.htm?actionFlag=getLocations&callType=Ajax&lStrHdrId="+lStrHdrId+"&stateId="+state;
+	xmlhttp.open("Post",url,true);
+	xmlhttp.send(null);
+}
+
+	function openHospitalBasicDtls(id){
+		 
+		var search='Y';var applSearch='';var appReadOnly = 'Y';var draftMenu = '';var isRSBY ='';var invalidMenu = '';//alert(isRSBY);
+		   document.forms[0].action='empnlWorkFlow.htm?actionFlag=ViewIndividualHosptlDtls&search='+search+'&applSearch='+applSearch+'&hospInfoId='+id+'&appReadOnly='
+				   +appReadOnly+'&draftMenu='+draftMenu+'&isRSBY='+isRSBY
+				   +'&invalidMenu='+invalidMenu;
+		   
+		   //alert(document.forms[0].action);
+		   document.forms[0].method="post";
+		   document.forms[0].submit();  
+		   fn_load_image();
+	}
+	
+	function openInspectionForm(hospInfoId){
+		var scheme = 'NHPS';
+	//	alert(scheme);
+		
+		var url='./empnlWorkFlow.htm?actionFlag=InspectionForm&hospInfoId='+hospInfoId+'&scheme='+scheme;
+		window.open(url);
+		
+		/* document.forms[0].action='./empnlWorkFlow.htm?actionFlag=InspectionForm&hospInfoId='+hospInfoId+'&scheme='+scheme;
+		window.open(document.forms[0].action); */
+		document.forms[0].method="post";
+		document.forms[0].submit();
+		//fn_load_image();
+	}
+
+/* function printHosp(arg)
+{
+	var url='patientDetailsRegJasper.do?actionFlag=patientDtlsJasPrint&patientNo='+arg;
+	document.forms[0].action=url;
+	document.forms[0].submit();
+}
+function hospDtlsPrint(hospInfoId)
+{
+	var url='patientDetailsRegJasper.do?actionFlag=patientDtlsJasPrint&patientNo='+hospInfoId;
+	document.forms[0].action=url;
+	document.forms[0].submit();
+} */
+
+function focusBox(arg)
+{	
+	
+	arg.style.borderColor  = "black";
+	  lField = arg; 
+	 setTimeout("lField.focus()", 0); 
+
+}
+function validateAlphaSpace11(arg,arg2)
+{
+
+var textbox1 =  eval("document.forms[0]."+arg);    
+var textval = textbox1.value;
+
+var tbLen = textval.replace(/\s+/g,'').replace(/\s+$/g,'') ;
+if(tbLen.length == 0)
+	{
+	 bootbox.alert('Blank spaces are not allowed in '+arg2, function() {
+ 	      
+	        focusBox(document.getElementById(arg));
+	        textbox1.value="";
+		  });
+ 	   parent.parent.$('html, body').animate({scrollTop: 0}, 500, 'linear');
+	
+	
+	return false;
+	}
+if(textval.charAt(0)==' '){ 
+	
+	 bootbox.alert('Starting blank spaces are not allowed in '+arg2, function() {
+	      
+	        focusBox(document.getElementById(arg));
+	        textbox1.value="";
+		  });
+  	   parent.parent.$('html, body').animate({scrollTop: 0}, 500, 'linear');
+
+	return false;
+}
+
+if(textval != null && textval != "")
+{
+	
+	var iChars = "~`!#$%^&*+=-[]\\\';,/{}|\":<>?.";
+	if(iChars.indexOf(textval.charAt(0))!= -1){
+		
+		 bootbox.alert('Starting special characters are not allowed in '+arg2, function() {
+	   	      
+	 	        focusBox(document.getElementById(arg));
+	 	       textbox1.value="";
+	 		  });
+	   	   parent.parent.$('html, body').animate({scrollTop: 0}, 500, 'linear');
+	   	   return;
+	}
+	if( textval.match(/[,.\(\)\/]{2}/i))
+	{
+	var fr = partial(textbox1);
+	   
+	 bootbox.alert("Continuous special characters are not allowed in "+arg2, function() {
+	      
+	        focusBox(document.getElementById(arg));
+	       textbox1.value="";
+		  });
+	   parent.parent.$('html, body').animate({scrollTop: 0}, 500, 'linear');
+	   return;
+	}
+	var reg=/^[a-zA-Z0-9 ]+$/;
+	if(textval.search(reg)==-1)
+	{
+		textval.value="";
+	   bootbox.alert('Only alphabets and digits are allowed in '+arg2,function(){
+		   focusBox(document.getElementById(arg));
+		   textbox1.value="";
+	   });
+	   parent.parent.$('html, body').animate({scrollTop: 0}, 500, 'linear');
+       return 0;
+	}
+	else
+	{
+var flag=true;
+flag=consecutiveSpecialChar(textval.trim());
+
+if(flag)
+{
+	Names.value=textval.trim();
+}
+else
+{
+	
+	  bootbox.alert("Consecutive blank spaces are not allowed for "+arg2,function(){
+		  focusBox(document.getElementById(arg));
+	        textbox1.value="";
+	  });
+	  parent.parent.$('html, body').animate({scrollTop: 0}, 500, 'linear');
+	
+	return false;
+}
+}
+}
+var ValidChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.(),";
+var IsNumber=true;
+var Char; 
+Names.value=textval.trim();
+if(textval.length > 0)
+{
+  for (i = 0; i < textval.length && IsNumber == true; i++) 
+	 { 
+        Char = textval.charAt(i); 
+       if (ValidChars.indexOf(Char) == -1) 
+		{  
+    	  
+  		 bootbox.alert("Only Characters from A-Z,a-z are allowed in "+arg2, function() {
+  	      
+  	        focusBox(document.getElementById(arg));
+  	      textbox1.value="";
+  		  });
+    	   parent.parent.$('html, body').animate({scrollTop: 0}, 500, 'linear');
+    	  
+
+			return false;
+		 }
+  		 
+		}
+  
+if( textval.match(/[,.\(\)\/]{2}/i))
+	{
+	var fr = partial(textbox1);
+	  
+	 bootbox.alert("Continuous special characters are not allowed in "+arg2, function() {
+	      
+	        focusBox(document.getElementById(arg));
+	       textbox1.value="";
+		  });
+	   parent.parent.$('html, body').animate({scrollTop: 0}, 500, 'linear');
+	}
+ var iChars = "~`!#$%^&*+=-[]\\\';,/{}|\":<>?.";
+    if(iChars.indexOf(textval.charAt(0))!= -1){
+    	
+		 bootbox.alert('Starting special characters are not allowed in '+arg2, function() {
+	   	      
+	 	        focusBox(document.getElementById(arg));
+	 	       textbox1.value="";
+	 		  });
+	   	   parent.parent.$('html, body').animate({scrollTop: 0}, 500, 'linear');
+    }
+    
+
+}
+else 
+	return false;
+}
+
+$('[data-toggle="tooltip"]').tooltip(); 
+  </script>
+  <style>
+  .logo-background-color {
+      background: radial-gradient(circle, rgb(14 157 157) 0%, rgb(241 153 22) 100%);
+}
+  .height-80 {
+    height: 80px;
+  }
+  
+  </style>
+  <script>
+  function redirectToHome()
+  {
+	  fn_load_image();
+	  location.href="https://mera.pmjay.gov.in/search/login";
+  }
+  
+  var imgCrtCount=1;
+	function fn_refreshCaptcha()
+	{
+		document.getElementById('imgCreateAct').src = "empanelApplicationForm.htm?actionVal=changeimageCreateAcnt&change="+imgCrtCount;
+		imgCrtCount = imgCrtCount+1;
+			
+			
+		}
+	
+
+	function fn_ValidateCaptcha() {
+
+		//check for user name and password
+		var state=document.getElementById("searchState").value;
+		var district=document.getElementById("searchDistrict").value;
+		var hospType=document.getElementById("searchHospType").value;
+		var specialityType=document.getElementById("searchSpeciality").value;
+		var hospName=document.getElementById("searchHospName").value;
+		var empType=document.getElementById("empanelmentType").value;
+	
+		if((state=='' || state == null || state=='-1') && (district=='' || district == null|| district=='-1') && (hospType=='' || hospType == null || hospType=='-1') && (specialityType=='' || specialityType == null || specialityType=='-1') && (hospName=='' || hospName == null) && (empType=='' || empType == null || empType == '-1'))
+			{
+			bootbox.alert("Please select any search criteria",function(){			 	  
+			 	  });
+
+	        return false;
+			}		
+		var cap = $('#j_captcha_response_crtacnt').val();
+		if(cap=='' || cap == null)
+	    {
+			bootbox.alert("Please Enter Captcha Code",function(){
+				focusBox(document.getElementById("j_captcha_response_crtacnt"));	
+		    });
+	        return false;
+	    } 
+		
+		var xmlhttp;
+		var url;
+		if (window.XMLHttpRequest) {
+			xmlhttp = new XMLHttpRequest();
+		} else if (window.ActiveXObject) {
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		} else {
+			alert("Your browser does not support XMLHTTP!");
+		}
+
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4) {
+				 var resultArray=xmlhttp.responseText.split("*");
+				  var msg =resultArray[0];
+				 // alert(msg);
+		   		  if(msg=="FAILURE")
+		   			  {
+		   				$("#errormsgCrtAcnt").show();
+		   				$('#j_captcha_response_crtacnt').val('');
+		   			  
+		   			  }
+		   		  else
+		   			  {
+		   			  $("#errormsgCrtAcnt").hide();
+		   			fnSearch();
+		   			  }
+       }
+		}
+		var cap = $('#j_captcha_response_crtacnt').val();
+		 url = "empanelApplicationForm.htm";
+			
+			xmlhttp.open("Post", url, true);
+			xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xmlhttp.send("actionVal=captchapageCrtAcnt&j_captcha_response="+cap);
+	}
+
+	function focusBoxCaptcha(arg)
+	{	
+		
+		lField = arg; 
+		setTimeout("lField.focus()", 0); 
+		
+	}
+  
+  </script>
+</head>
+<body onload="fn_refreshCaptcha();onloadFn();" style="overflow-y: scroll">
+
+<div class="container" style="padding:0px;" >
+
+<div id="loader" style="display:none;"></div>
+<div  id="myDiv"></div>
+
+<form id="empnlHospForm" name="empnlHospForm" action="/Search/empnlWorkFlow.htm;jsessionid=IdMWufyUNCjstBXXe8LurKcFJie5EnOUxR8psO4-.hos_prod_as1?actionFlag=ViewRegisteredHosptlsNew&amp;search=Y&amp;applSearch=N&amp;appReadOnly=Y&amp;draftMenu=N&amp;invalidMenu=N&amp;export=E&amp;searchState=99&amp;searchHospType=PrivateP" method="post">
+
+<input type="hidden" name="actionFlag" id="actionFlag"/>
+<input type="hidden" name="actionVal" id="actionVal"/>
+<input type="hidden" name="search" id="search"/>
+<input type="hidden" name="applSearch" id="applSearch"/>
+<input type="hidden" name="hospInfoId" id="hospInfoId"/>
+<input type="hidden" name="appReadOnly" id="appReadOnly"/>
+<input type="hidden" name="draftMenu" id="draftMenu"/>
+<input type="hidden" name="isRSBY" id="isRSBY"/>
+<input type="hidden" name="export" id="export"/>
+<input type="hidden" name="pageNo" id="pageNo"/>
+
+
+<div class="container" >
+
+		<!-- banner new starts-->
+
+		<div class=" logo-background-color" style="height: 80px;cursor:pointer;" title="Click Here to redirect to HomePage" onclick="redirectToHome();">
+			<div class=" col-md-4 col-sm-4 col-xs-4 " style="margin-top: 10px;">
+				<img src="images/logo_left.png" alt="" class="img-responsive img-center" style="height: 50px;">
+			</div>
+			<div class=" col-md-4 col-sm-4 col-xs-4">
+				<img src="images/logo_center.png" class="img-responsive img-center " style="height: 80px;">
+			</div>
+			<div class=" col-md-4 col-sm-4 col-xs-4"  style="margin-top: 10px;">
+			<img src="images/NHA-ENGLISH-LOG0-01.png" style="height: 60px;margin-left: 100px;"/>
+				<!-- <img src="images/logo_right.png" class="img-responsive img-center" style="height: 50px;"> -->
+			</div>
+		</div>
+	
+<nav class="navbar1">
+		<div class="container">
+		<!-- <a href="#" class="btn btn-1" onClick="javascript:window.open('https://mera.pmjay.gov.in/search/login');" style="font-size:12px" >Check Eligibility</a>&nbsp;-->
+		<a href="#" class="btn btn-3" onClick="javascript:window.open('https://hospitals.pmjay.gov.in/Search','_self');" style="font-size:12px">Find Hospitals</a>
+       <a href="#" class="btn btn-1" onClick="javascript:window.open('https://hospitals.pmjay.gov.in/Search/empnlWorkFlow.htm?actionFlag=ViewCGHSCAPFRegisteredHosptls','_self');" style="font-size:12px">CGHS CAPF Hospitals</a><!--  PROD-->
+	   
+	    <!--<a href="#" class="btn btn-1" onClick="javascript:window.open('https://hospitals.pmjay.gov.in/Search/empnlWorkFlow.htm?actionFlag=ViewRegisteredHosptlsMap');" style="font-size:12px">View Map</a>  -->
+		<!--<a href="#" class="btn btn-3" onClick="javascript:window.open('http://localhost:8080/empnlWorkFlow.htm?actionFlag=ViewRegisteredHosptlsMap');" style="font-size:12px">View Map</a>--><!-- local -->
+		<!--<a href="#" class="btn btn-3" onClick="javascript:window.open('https://hembeta.pmjay.gov.in/Search/empnlWorkFlow.htm?actionFlag=ViewRegisteredHosptlsMap');" style="font-size:12px">View Map</a>--> <!-- UAT -->
+		<!--<a href="#" class="btn btn-1" onClick="javascript:window.open('http://localhost:8088/empnlWorkFlow.htm?actionFlag=ViewCGHSCAPFRegisteredHosptls','_self');" style="font-size:12px">CGHS CAPF Hospitals</a>-->
+		
+	<!--<a href="#" class="btn btn-3" onClick="javascript:window.open('https://hembeta.pmjay.gov.in/Search','_self');" style="font-size:12px">Find Hospitals</a>-->
+	<!--<a href="#" class="btn btn-3" onClick="javascript:window.open('https://hembeta.pmjay.gov.in/Search/empnlWorkFlow.htm?actionFlag=ViewRegisteredHosptlsMap');" style="font-size:12px">View Map</a> --><!-- UAT -->
+	  <!--   <a href="#" class="btn btn-1" onClick="javascript:window.open('https://hembeta.pmjay.gov.in/Search/empnlWorkFlow.htm?actionFlag=ViewCGHSCAPFRegisteredHosptls','_self');" style="font-size:12px">CGHS CAPF Hospitals</a><!--UAT-->
+		
+		
+		</div>
+	</nav>
+	<br/>
+	
+	<div class="col-sm-12  marquee1 panel-heading1 heading1" style="margin-top: -20px;">
+			<marquee behavior="scroll" scrolldelay="100" direction="left" loop="infinite" height="18">				
+					<p class="text-marquee"> <strong> Welcome to Ayushman Bharat | Search for Empanelled Hospitals here! </strong> </p>
+
+			</marquee>
+			</div>
+<div class ="col-md-6 col-sm-6 col-xs-12 "><a href="empnlWorkFlow.htm?actionFlag=ViewSuspendedHospitals" title="Suspended Hospital Search" style="color:red!important;"><u>Suspended Hospitals List</u></a>
+               </div>  
+<div class="row" style="margin-right:0px;">
+              <div class="col-md-8 col-sm-8 col-xs-12" style="padding-right: 0px !important;">
+            <div class="x_panel">
+              <div class="x_title info-text" style="text-align: center;color: #fff;box-shadow: 0 0.46875rem 2.1875rem rgb(4 9 20 / 3%), 0 0.9375rem 1.40625rem rgb(4 9 20 / 3%), 0 0.25rem 0.53125rem rgb(4 9 20 / 5%), 0 0.125rem 0.1875rem rgb(4 9 20 / 3%);
+      border-color: #ddd!important;">
+      
+
+    
+     
+    
+    
+    <a data-toggle="collapse"  href="#registeredHospitals" title="Click to search" style="color:white">  Hospitals Search</a>
+    
+   
+
+
+      
+ 
+     
+       		 
+       		 <div class="clearfix"></div>
+              </div>
+
+             
+
+                <div class="row" style="float: none; margin: 0 auto;">
+                
+                 <div class="col-md-6 col-sm-6  col-xs-12 form-group"><Label><b>State</b> </Label>
+					<select name="searchState" onmouseover="addTooltip('searchState')" onchange="getDistrictList();removeColor(this);" id="searchState" style="width:100%" class="form-control" title="Select Card State"><option value="-1">---select---</option>
+					<option value="35">ANDAMAN AND NICOBAR ISLANDS</option>
+<option value="28">ANDHRA PRADESH</option>
+<option value="12">ARUNACHAL PRADESH</option>
+<option value="18">ASSAM</option>
+<option value="10">BIHAR</option>
+<option value="4">CHANDIGARH</option>
+<option value="22">CHHATTISGARH</option>
+<option value="26">DADRA AND NAGAR HAVELI</option>
+<option value="25">DAMAN AND DIU</option>
+<option value="30">GOA</option>
+<option value="24">GUJARAT</option>
+<option value="6">HARYANA</option>
+<option value="2">HIMACHAL PRADESH</option>
+<option value="1">JAMMU AND KASHMIR</option>
+<option value="20">JHARKHAND</option>
+<option value="29">KARNATAKA</option>
+<option value="32">KERALA</option>
+<option value="37">LADAKH</option>
+<option value="31">LAKSHADWEEP</option>
+<option value="23">MADHYA PRADESH</option>
+<option value="27">MAHARASHTRA</option>
+<option value="14">MANIPUR</option>
+<option value="17">MEGHALAYA</option>
+<option value="15">MIZORAM</option>
+<option value="13">NAGALAND</option>
+<option value="7">NCT OF Delhi</option>
+<option value="99" selected="selected">NHCP</option>
+<option value="21">ODISHA</option>
+<option value="98">PSU</option>
+<option value="34">PUDUCHERRY</option>
+<option value="3">PUNJAB</option>
+<option value="8">RAJASTHAN</option>
+<option value="11">SIKKIM</option>
+<option value="33">TAMIL NADU</option>
+<option value="36">TELANGANA</option>
+<option value="16">TRIPURA</option>
+<option value="5">UTTARAKHAND</option>
+<option value="9">UTTAR PRADESH</option>
+<option value="19">WEST BENGAL</option></select>
+                  </div> 
+                		  <div class="col-md-6 col-sm-6  col-xs-12 form-group"><Label><b>District</b></Label>
+     				  <select name="searchDistrict" onmouseover="addTooltip('searchDistrict')" onkeypress="resetDist(1);" onchange="getHospitalNamesList();removeColor(this);" id="searchDistrict" style="width:100%" class="form-control" title="Select Card District"><option value="-1" selected="selected">---select---</option></select>
+                	  </div>
+                	 
+          </div> 
+          <div class="row" style="float: none; margin: 0 auto;">
+                <div class="col-md-6 col-sm-6 col-xs-12  form-group"><label>Hospital Type</label>
+              <select id="searchHospType" name="searchHospType" title="Select Hospital Type" onmouseover="addTooltip('searchHospType')" onkeypress="resetDist(1)" name="empnlHospForm" style="width:100%" class="form-control" onchange="removeColor(this);getHospitalNamesList();">
+								<option value="-1">---select---</option>
+								<option value="Public">Public</option>
+								<option value="PrivateNP">Private(Not For Profit)</option>
+								<option value="PrivateP" selected="selected">Private(For Profit)</option>
+			</select>
+                  </div>			
+                  
+             															
+          
+                	  
+                	    
+                	  <div class="col-md-6 col-sm-6 col-xs-12 form-group"><Label><b>Speciality  </b></Label>
+                	   <select name="searchSpeciality" onmouseover="addTooltip('searchSpeciality')" onchange="removeColor(this);getHospitalNamesList();" id="searchSpeciality" style="width:100%" class="form-control" title="Select Speciality"><option value="-1">---select---</option>
+					<option value="BM">BM-Burns Managemnet</option>
+<option value="CP">CP-Consultations &amp; Procedures</option>
+<option value="ER">ER-Emergency Room Packages (Care requiring less than 12 hrs stay)</option>
+<option value="IA">IA-Name of Investigation</option>
+<option value="IB">IB-Laboratory Medicine</option>
+<option value="IC">IC-Nutritional Markers</option>
+<option value="ID">ID-Infectious Diseases</option>
+<option value="IE">IE-Hormones</option>
+<option value="IF">IF-USG, X - Ray, CT, MRI, Bone Densitometry</option>
+<option value="IG">IG-X - Ray</option>
+<option value="IH">IH-X - Ray Contrast Studies</option>
+<option value="II">II-Mammography</option>
+<option value="IJ">IJ-CT</option>
+<option value="IK">IK-MRI</option>
+<option value="IL">IL-Bone Densitometry (Dexa Scan)</option>
+<option value="IM">IM-Neurological investigations and procedures</option>
+<option value="IMP">IMP-Implants</option>
+<option value="IN">IN-Interventional Neuroradiology</option>
+<option value="IO">IO-Tests in Gastro-enterology</option>
+<option value="IP">IP-Tests in Endocrinology (In Addition to those included under Hormones)</option>
+<option value="IQ">IQ-CSF</option>
+<option value="JR">JR-Joint Replacement</option>
+<option value="M1">M1-General Medicine</option>
+<option value="M10">M10-OPD Diagnostic</option>
+<option value="M2">M2-Paediatric medical management</option>
+<option value="M3">M3-Neo-natal</option>
+<option value="M4">M4-Paediatric cancer</option>
+<option value="M5">M5-Medical Oncology</option>
+<option value="M6">M6-Radiation Oncology</option>
+<option value="M7">M7-Emergency Room Packages (Care requiring less than 12 hrs stay)</option>
+<option value="M8">M8-Mental Disorders Packages</option>
+<option value="MA">MA-Treatment Procedure Skin</option>
+<option value="MB">MB-Biopsies</option>
+<option value="MC">MC-Cardiology</option>
+<option value="MD">MD-Treatment procedure ICU / CCU procedures (Special Care Cases)</option>
+<option value="ME">ME-Treatment procedure Physiotherapy</option>
+<option value="MF">MF-Nuclear Medicine / Brachytherapy - High Dose Radiation</option>
+<option value="MG">MG-General Medicine</option>
+<option value="MJ">MJ-Nuclear Medicine / Chemotherapy</option>
+<option value="MK">MK-List of procedures / Tests in Gastroenterology / Endoscopic procedures</option>
+<option value="MM">MM-Mental Disorders Packages</option>
+<option value="MN">MN-Neo-natal care Packages</option>
+<option value="MO">MO-Medical Oncology</option>
+<option value="MP">MP-Paediatric Medical Management</option>
+<option value="MQ">MQ-Nuclear Medicine / Radiotherapy and Chemotherapy</option>
+<option value="MR">MR-Radiation Oncology</option>
+<option value="NA">NA-Paediatric Cancer</option>
+<option value="OA">OA-Others</option>
+<option value="OC">OC-OPD - Consultations, Procedures &amp; Investigations</option>
+<option value="OT">OT-Organ &amp; Tissue transplant</option>
+<option value="PH">PH-Preventive Health Check Up</option>
+<option value="S1">S1-General Surgery</option>
+<option value="S10">S10-Plastic &amp; reconstructive</option>
+<option value="S11">S11-Burns management</option>
+<option value="S12">S12-Cardiology</option>
+<option value="S13">S13-Cardio-thoracic &amp; Vascular surgery</option>
+<option value="S14">S14-Paediatric surgery</option>
+<option value="S15">S15-Surgical Oncology</option>
+<option value="S16">S16-Oral and Maxillofacial Surgery</option>
+<option value="S2">S2-Otorhinolaryngology</option>
+<option value="S3">S3-Opthalmology</option>
+<option value="S4">S4-Obstetrics &amp; Gynaecology</option>
+<option value="S5">S5-Orthopaedics</option>
+<option value="S6">S6-Polytrauma</option>
+<option value="S7">S7-Urology</option>
+<option value="S8">S8-Neurosurgery</option>
+<option value="S9">S9-Interventional Neuroradiology</option>
+<option value="SA">SA-Treatment procedure Head &amp; Neck</option>
+<option value="SB">SB-Orthopaedics</option>
+<option value="SC">SC-Surgical Oncology</option>
+<option value="SD">SD-Treatment procedure Oesophagus</option>
+<option value="SE">SE-Opthalmology</option>
+<option value="SF">SF-Treatment procedure Abdomen / GI Surgery</option>
+<option value="SG">SG-General Surgery</option>
+<option value="SH">SH-Treatment Procedure Burns and Plastic Surgery</option>
+<option value="SI">SI-Treatment Procedure Nephrology and Urology</option>
+<option value="SJ">SJ-Head and Neck cancer</option>
+<option value="SK">SK-Treatment Procedure Breast</option>
+<option value="SL">SL-Otorhinolaryngology</option>
+<option value="SM">SM-Oral and Maxillofacial Surgery</option>
+<option value="SN">SN-Neurosurgery</option>
+<option value="SO">SO-Obstetrics &amp; Gynaecology</option>
+<option value="SP">SP-Plastic &amp; reconstructive Surgery</option>
+<option value="SS">SS-Paediatric surgery</option>
+<option value="ST">ST-Polytrauma</option>
+<option value="SU">SU-Urology</option>
+<option value="SV">SV-Cardio-thoracic &amp; Vascular Surgery</option>
+<option value="TG">TG-Gender Affirming Medical and Surgical Treatments</option>
+<option value="UP">UP-Unspecified Package</option></select>
+					
+					
+                	  </div>
+                	  
+                	  
+          
+			
+				   </div> 
+                  
+                  
+				  <div class="row" style="float: none; margin: 0 auto;">
+		
+ 	  
+                 <div class="col-md-6 col-sm-6 col-xs-12  form-group"><Label><b>Hospital Name</b></Label>
+     				  <select name="searchHospName" onmouseover="addTooltip('searchHospName')" onchange="removeColor(this);" id="searchHospName" style="width:100%" class="form-control" title="Select Hospital Name"><option value="-1">---select---</option></select>
+                	  </div>
+                	  
+                <div class="col-md-6 col-sm-6 col-xs-12 form-group"><Label><b>Empanelment Type</b></Label>
+                	<select name="empanelmentType" onmouseover="addTooltip('empanelmentType')" onkeypress="resetDist(1);" onchange="getHospitalNamesList();removeColor(this);" id="empanelmentType" style="width:100%" class="form-control" title="Select Empanelment Type"><option value="-1" selected="selected">---select---</option>
+					<option value="PMJAY">PMJAY</option>
+					<option value="PMJAY and CGHS">PMJAY and CGHS</option>
+					<option value="PMJAY and CAPF">PMJAY and CAPF</option>
+					<option value="Only CGHS">Only CGHS</option>
+					<option value="Only CAPF">Only CAPF</option>
+					<option value="CMHIS">CMHIS</option>
+					<option value="KASS">KASS</option></select>
+                	  </div>
+
+				</div>
+
+							<div class="row"
+								style=" display: flex;    justify-content: center;    align-items: center;">	
+				    									<div class="input-group" >
+										<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 noPadding">
+										<span class="input-group-addon">
+											<img id="imgCreateAct"  alt="Captcha Code" /> 
+											</span>
+										</div>
+										<div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 noPadding" style="text-align: center;padding-top: 5px !important;">
+										<a title="Refresh Image"><img width="22px" height="22x" src="images/refres.jpg" onClick="fn_refreshCaptcha();" alt="Refresh Code" >  </a>
+										
+										</div>
+										<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 input-cap " style="margin-top: 2px !important;">												
+<!-- 										<input type="text" class="form-control login-wrap" name="j_captcha_response_crtacnt" id="j_captcha_response_crtacnt" path="captchaCrtAcnt" maxlength="6" style="width: 80%;line-height: 2; margin-left: 5px;"/>
+ -->										
+										<input type="text" id="j_captcha_response_crtacnt" name="j_captcha_response_crtacnt" autocomplete="off" placeholder="Enter Captcha" class="form-control input-sm1" maxlength="6"  title="Enter code in the image." required="required">
+										
+										
+										</div>
+										
+										</div>
+										
+									     	
+   
+           
+									</div>	
+   
+   <div colspan="3" align="center" nowrap="nowrap" >( Please enter visible characters in the text box )
+										 <div style="color:red;display:none;" id="errormsgCrtAcnt">Incorrect Captcha code was entered</div> 
+										</div>  
+				
+			<div class="row" align="center">
+				 <button type="button" class="btn btn-2" onclick="javascript:fn_ValidateCaptcha();"><span class="glyphicon glyphicon-search"></span>Search </button>
+				 <button type="button" class="btn btn-4" onclick="resetSearch()"><span class="glyphicon glyphicon-minus-sign"></span> Reset</button>
+
+				 </div>
+				 
+				</div>
+				
+                	 
+				
+				
+				 
+				 </div>
+				   <div class="col-md-4">
+				 <img src="images/banner.jpg" width="350px"/>
+				 
+				 </div>
+				 
+				 </div>
+				 	
+			 
+
+
+
+
+
+<div  style="text-align:center;">
+
+<table width="50%"  cellpadding="1" cellspacing="1" align="center" style="padding-top:0px;margin:1px auto;margin-top:150px;" class="tb">
+<tr style="text-align:center;">
+No Records Found
+</tr>
+</table>
+
+</div>
+
+
+	
+
+</div>
+	<input id="advSearch" name="advSearch" name="advSearch" value="false" type="hidden" value=""/>
+	<input id="currHospInfoId" name="currHospInfoId" name="currHospInfoId" type="hidden" value=""/>
+	<input id="currHospName" name="currHospName" name="currHospName" type="hidden" value=""/>
+	<input id="currStateId" name="currStateId" name="currStateId" type="hidden" value=""/>
+	<input id="currDistrictId" name="currDistrictId" name="currDistrictId" type="hidden" value=""/>
+	<input id="currFromDate" name="currFromDate" name="currFromDate" type="hidden" value=""/>
+	<input id="currToDate" name="currToDate" name="currToDate" type="hidden" value=""/>
+	<input id="currHospType" name="currHospType" name="currHospType" type="hidden" value=""/>
+	
+	<input id="noOfPages" name="noOfPages" name="noOfPages" type="hidden" value="0"/>
+	</form>
+</div> 
+</body>
+
+<footer class="container-fluid text-center">
+		<p class="margin-bottom-0">
+			MINISTRY OF HEALTH AND FAMILY WELFARE
+		
+		</p>
+	</footer>
+
+</html>
