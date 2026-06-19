@@ -1,0 +1,520 @@
+[
+  {
+    "specialityid": "10083",
+    "specialitycode": "PM",
+    "specialityname": "Palliative Medicine",
+    "displayorder": "28",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100001",
+    "specialitycode": "BM",
+    "specialityname": "Burns Management",
+    "displayorder": "1",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100002",
+    "specialitycode": "MC",
+    "specialityname": "Cardiology",
+    "displayorder": "2",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100003",
+    "specialitycode": "SV",
+    "specialityname": "Cardio-thoracic & Vascular surgery",
+    "displayorder": "3",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100004",
+    "specialitycode": "ER",
+    "specialityname": "Emergency Room Packages (Care requiring less than 12 hrs stay)",
+    "displayorder": "23",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100005",
+    "specialitycode": "MG",
+    "specialityname": "General Medicine",
+    "displayorder": "5",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100006",
+    "specialitycode": "SG",
+    "specialityname": "General Surgery",
+    "displayorder": "6",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100007",
+    "specialitycode": "IN",
+    "specialityname": "Interventional Neuroradiology",
+    "displayorder": "7",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100008",
+    "specialitycode": "MO",
+    "specialityname": "Medical Oncology",
+    "displayorder": "8",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100009",
+    "specialitycode": "MM",
+    "specialityname": "Mental Disorders Packages",
+    "displayorder": "9",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100010",
+    "specialitycode": "MN",
+    "specialityname": "Neo-natal care Packages",
+    "displayorder": "10",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100011",
+    "specialitycode": "SN",
+    "specialityname": "Neurosurgery",
+    "displayorder": "11",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100012",
+    "specialitycode": "SO",
+    "specialityname": "Obstetrics & Gynaecology",
+    "displayorder": "12",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100013",
+    "specialitycode": "SE",
+    "specialityname": "Opthalmology",
+    "displayorder": "13",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100014",
+    "specialitycode": "SM",
+    "specialityname": "Oral & Maxillofacial Surgery",
+    "displayorder": "14",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100015",
+    "specialitycode": "SB",
+    "specialityname": "Orthopaedics",
+    "displayorder": "15",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100016",
+    "specialitycode": "SL",
+    "specialityname": "Otorhinolaryngology",
+    "displayorder": "16",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100017",
+    "specialitycode": "MP",
+    "specialityname": "Paediatric Medical management",
+    "displayorder": "17",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100018",
+    "specialitycode": "SS",
+    "specialityname": "Paediatric Surgery",
+    "displayorder": "18",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100019",
+    "specialitycode": "SP",
+    "specialityname": "Plastic and Reconstructive Surgery",
+    "displayorder": "19",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100020",
+    "specialitycode": "ST",
+    "specialityname": "Polytrauma",
+    "displayorder": "20",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100021",
+    "specialitycode": "MR",
+    "specialityname": "Radiation Oncology",
+    "displayorder": "21",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100022",
+    "specialitycode": "SC",
+    "specialityname": "Surgical Oncology",
+    "displayorder": "22",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100023",
+    "specialitycode": "SU",
+    "specialityname": "Urology",
+    "displayorder": "23",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100024",
+    "specialitycode": "US",
+    "specialityname": "Unspecified Surgical Package",
+    "displayorder": "29",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100026",
+    "specialitycode": "ID",
+    "specialityname": "Infectious Diseases",
+    "displayorder": "24",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100027",
+    "specialitycode": "NA",
+    "specialityname": "Paediatric Cancer",
+    "displayorder": "27",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100028",
+    "specialitycode": "OT",
+    "specialityname": "Organ & Tissue Transplant",
+    "displayorder": "25",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100043",
+    "specialitycode": "IMP",
+    "specialityname": "Implants",
+    "displayorder": "39",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100114",
+    "specialitycode": "AS",
+    "specialityname": "Ambulance Services",
+    "displayorder": "1",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100194",
+    "specialitycode": "YG",
+    "specialityname": "Yoga",
+    "displayorder": "40",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100213",
+    "specialitycode": "ERRT",
+    "specialityname": "Emergency Room Packages",
+    "displayorder": "2",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100214",
+    "specialitycode": "CN",
+    "specialityname": "Consultation",
+    "displayorder": "31",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100215",
+    "specialitycode": "LB",
+    "specialityname": "Laboratory Medicine",
+    "displayorder": "27",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100216",
+    "specialitycode": "RI",
+    "specialityname": "Radiology",
+    "displayorder": "40",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100217",
+    "specialitycode": "PP",
+    "specialityname": "Pulmonology",
+    "displayorder": "12",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100218",
+    "specialitycode": "NM",
+    "specialityname": "Nuclear Medicine",
+    "displayorder": "34",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100219",
+    "specialitycode": "BY",
+    "specialityname": "Biopsies",
+    "displayorder": "38",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100220",
+    "specialitycode": "RP",
+    "specialityname": "Interventional Radiology",
+    "displayorder": "7",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100221",
+    "specialitycode": "CA",
+    "specialityname": "Oncology Investigations",
+    "displayorder": "34",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100222",
+    "specialitycode": "CT",
+    "specialityname": "Chemotherapy",
+    "displayorder": "8",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100223",
+    "specialitycode": "RT",
+    "specialityname": "Radiotherapy",
+    "displayorder": "21",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100224",
+    "specialitycode": "IT",
+    "specialityname": "Radio-Isotope Therapy",
+    "displayorder": "28",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100225",
+    "specialitycode": "PT",
+    "specialityname": "Physiotherapy",
+    "displayorder": "26",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100226",
+    "specialitycode": "BT",
+    "specialityname": "Behavioural therapy",
+    "displayorder": "9",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100227",
+    "specialitycode": "DI",
+    "specialityname": "Dentistry",
+    "displayorder": "37",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100228",
+    "specialitycode": "OP",
+    "specialityname": "Ophthalmology",
+    "displayorder": "8",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100229",
+    "specialitycode": "ENT",
+    "specialityname": "ENT",
+    "displayorder": "16",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100230",
+    "specialitycode": "CC",
+    "specialityname": "Critical Care",
+    "displayorder": "17",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100231",
+    "specialitycode": "BC",
+    "specialityname": "Blood Component Charges",
+    "displayorder": "31",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100232",
+    "specialitycode": "GP",
+    "specialityname": "General Procedure",
+    "displayorder": "10",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100233",
+    "specialitycode": "HN",
+    "specialityname": "Head and Neck Surgery",
+    "displayorder": "11",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100234",
+    "specialitycode": "SKN",
+    "specialityname": "Skin",
+    "displayorder": "15",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100235",
+    "specialitycode": "CD",
+    "specialityname": "Cardiology",
+    "displayorder": "9",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100236",
+    "specialitycode": "CV",
+    "specialityname": "Cardiovascular And Cardiac Surgery",
+    "displayorder": "2",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100237",
+    "specialitycode": "GS",
+    "specialityname": "General Surgery",
+    "displayorder": "3",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100238",
+    "specialitycode": "GM",
+    "specialityname": "Medical Gastroenterology",
+    "displayorder": "42",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100239",
+    "specialitycode": "AG",
+    "specialityname": "Abdomen/GI Surgery",
+    "displayorder": "40",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100240",
+    "specialitycode": "PS",
+    "specialityname": "Paediatric Surgery",
+    "displayorder": "22",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100241",
+    "specialitycode": "OG",
+    "specialityname": "Obstetrics And Gynaecology",
+    "displayorder": "14",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100242",
+    "specialitycode": "NU",
+    "specialityname": "Nephrology And Urology",
+    "displayorder": "35",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100243",
+    "specialitycode": "NI",
+    "specialityname": "Neurology",
+    "displayorder": "13",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100244",
+    "specialitycode": "NS",
+    "specialityname": "Neuro-Surgery",
+    "displayorder": "11",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100245",
+    "specialitycode": "OR",
+    "specialityname": "Orthopaedics",
+    "displayorder": "15",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100246",
+    "specialitycode": "BP",
+    "specialityname": "Burns And Plastic Surgery",
+    "displayorder": "1",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100247",
+    "specialitycode": "HC",
+    "specialityname": "Annual Health Check-up",
+    "displayorder": "32",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100248",
+    "specialitycode": "WC",
+    "specialityname": "Ward charges",
+    "displayorder": "29",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100249",
+    "specialitycode": "TMH",
+    "specialityname": "Surgical Oncology ",
+    "displayorder": "22",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100250",
+    "specialitycode": "AY",
+    "specialityname": "Ayurveda",
+    "displayorder": "41",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100251",
+    "specialitycode": "NP",
+    "specialityname": "Naturopathy",
+    "displayorder": "42",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100252",
+    "specialitycode": "YGN",
+    "specialityname": "Yoga and Naturopathy",
+    "displayorder": "2",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100253",
+    "specialitycode": "UN",
+    "specialityname": "Unani",
+    "displayorder": "3",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100254",
+    "specialitycode": "SID",
+    "specialityname": "Siddha",
+    "displayorder": "4",
+    "status": "Active"
+  },
+  {
+    "specialityid": "100256",
+    "specialitycode": "AY",
+    "specialityname": "Ayurveda",
+    "displayorder": "1",
+    "status": "Active"
+  }
+]

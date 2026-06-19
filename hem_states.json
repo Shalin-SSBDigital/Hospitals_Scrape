@@ -1,0 +1,297 @@
+{
+  "states": {
+    "ANDAMAN AND NICOBAR ISLANDS": "35",
+    "ANDHRA PRADESH": "28",
+    "ARUNACHAL PRADESH": "12",
+    "ASSAM": "18",
+    "BIHAR": "10",
+    "CAPF": "91",
+    "CGHS": "93",
+    "CHANDIGARH": "4",
+    "CHHATTISGARH": "22",
+    "DELHI": "7",
+    "DNH AND DD": "38",
+    "GOA": "30",
+    "GUJARAT": "24",
+    "HARYANA": "6",
+    "HIMACHAL PRADESH": "2",
+    "JAMMU AND KASHMIR": "1",
+    "JHARKHAND": "20",
+    "KARNATAKA": "29",
+    "KERALA": "32",
+    "LADAKH": "37",
+    "LAKSHADWEEP": "31",
+    "MADHYA PRADESH": "23",
+    "MAHARASHTRA": "27",
+    "MANIPUR": "14",
+    "MEGHALAYA": "17",
+    "MIZORAM": "15",
+    "NAGALAND": "13",
+    "NAMASTE": "89",
+    "NDRF": "88",
+    "NHA": "99",
+    "ODISHA": "21",
+    "PM RAHAT": "97",
+    "PM-CARES": "95",
+    "PUDUCHERRY": "34",
+    "PUNJAB": "3",
+    "RAJASTHAN": "8",
+    "SIKKIM": "11",
+    "SMILE": "96",
+    "TAMIL NADU": "33",
+    "TELANGANA": "36",
+    "TRIPURA": "16",
+    "UTTAR PRADESH": "9",
+    "UTTARAKHAND": "5",
+    "WEST BENGAL": "19"
+  },
+  "counts": {
+    "22": {
+      "data": {
+        "Government": 1041,
+        "Private": 567,
+        "NABH Accrediated": 335
+      }
+    },
+    "23": {
+      "data": {
+        "Government": 1005,
+        "Private": 685,
+        "NABH Accrediated": 487
+      }
+    },
+    "24": {
+      "data": {
+        "Government": 1124,
+        "Private": 930,
+        "NABH Accrediated": 289,
+        "De-Empaneled": 1
+      }
+    },
+    "27": {
+      "data": {
+        "Government": 1017,
+        "Private": 1196,
+        "NABH Accrediated": 500
+      }
+    },
+    "28": {
+      "data": {
+        "Government": 1415,
+        "Private": 1057,
+        "NABH Accrediated": 27
+      }
+    },
+    "29": {
+      "data": {
+        "Government": 474,
+        "Private": 476,
+        "NABH Accrediated": 8
+      }
+    },
+    "30": {
+      "data": {
+        "Government": 23,
+        "Private": 3,
+        "NABH Accrediated": 4
+      }
+    },
+    "31": {
+      "data": {
+        "Government": 5
+      }
+    },
+    "10": {
+      "data": {
+        "Government": 432,
+        "Private": 692,
+        "NABH Accrediated": 208
+      }
+    },
+    "32": {
+      "data": {
+        "Government": 205,
+        "Private": 405,
+        "NABH Accrediated": 119
+      }
+    },
+    "11": {
+      "data": {
+        "Government": 14,
+        "Private": 5,
+        "NABH Accrediated": 5
+      }
+    },
+    "33": {
+      "data": {
+        "Government": 263,
+        "Private": 804,
+        "NABH Accrediated": 530
+      }
+    },
+    "12": {
+      "data": {
+        "Government": 48,
+        "Private": 8,
+        "NABH Accrediated": 2
+      }
+    },
+    "34": {
+      "data": {
+        "Government": 12,
+        "Private": 20,
+        "NABH Accrediated": 15
+      }
+    },
+    "35": {
+      "data": {
+        "Government": 7
+      }
+    },
+    "13": {
+      "data": {
+        "Government": 53,
+        "Private": 12,
+        "NABH Accrediated": 5
+      }
+    },
+    "14": {
+      "data": {
+        "Government": 34,
+        "Private": 38,
+        "NABH Accrediated": 5
+      }
+    },
+    "36": {
+      "data": {
+        "Government": 1017,
+        "Private": 422,
+        "NABH Accrediated": 14
+      }
+    },
+    "37": {
+      "data": {
+        "Government": 10,
+        "Private": 1
+      }
+    },
+    "15": {
+      "data": {
+        "Government": 81,
+        "Private": 8,
+        "NABH Accrediated": 8
+      }
+    },
+    "38": {
+      "data": {
+        "Government": 15,
+        "Private": 5
+      }
+    },
+    "16": {
+      "data": {
+        "Government": 133,
+        "Private": 9,
+        "NABH Accrediated": 17
+      }
+    },
+    "17": {
+      "data": {
+        "Government": 145,
+        "Private": 34,
+        "NABH Accrediated": 21
+      }
+    },
+    "18": {
+      "data": {
+        "Government": 182,
+        "Private": 177,
+        "NABH Accrediated": 38
+      }
+    },
+    "19": {
+      "data": {
+        "Government": 29,
+        "Private": 24,
+        "NABH Accrediated": 21
+      }
+    },
+    "1": {
+      "data": {
+        "Government": 124,
+        "Private": 153,
+        "NABH Accrediated": 81
+      }
+    },
+    "2": {
+      "data": {
+        "Government": 138,
+        "Private": 159,
+        "NABH Accrediated": 48
+      }
+    },
+    "3": {
+      "data": {
+        "Government": 220,
+        "Private": 610,
+        "NABH Accrediated": 349
+      }
+    },
+    "4": {
+      "data": {
+        "Government": 8,
+        "Private": 23,
+        "NABH Accrediated": 21
+      }
+    },
+    "5": {
+      "data": {
+        "Government": 226,
+        "Private": 225,
+        "NABH Accrediated": 214
+      }
+    },
+    "6": {
+      "data": {
+        "Government": 572,
+        "Private": 786,
+        "NABH Accrediated": 658
+      }
+    },
+    "7": {
+      "data": {
+        "Government": 50,
+        "Private": 139,
+        "NABH Accrediated": 134
+      }
+    },
+    "8": {
+      "data": {
+        "Government": 931,
+        "Private": 978,
+        "NABH Accrediated": 64
+      }
+    },
+    "9": {
+      "data": {
+        "Government": 2932,
+        "Private": 3320,
+        "NABH Accrediated": 1291
+      }
+    },
+    "20": {
+      "data": {
+        "Government": 240,
+        "Private": 297,
+        "NABH Accrediated": 87
+      }
+    },
+    "21": {
+      "data": {
+        "Government": 16,
+        "Private": 786,
+        "NABH Accrediated": 200
+      }
+    }
+  }
+}

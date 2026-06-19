@@ -926,3 +926,281 @@
 [2026-06-17T13:59:12] After:  24664 with specialities, 9459 empty
 [2026-06-17T13:59:12] Recovered 192 previously-empty rows, updated 16732 with newer data
 [2026-06-17T13:59:12] Specialities coverage: 72.3%
+[2026-06-19T11:14:26] [fast-spec] === START (workers=10, batch=200, limit=20, dry=True) ===
+[2026-06-19T11:14:26] [fast-spec] Bootstrapping session cookie from /Search/ …
+[2026-06-19T11:14:26] [fast-spec] FATAL: 502 Server Error: Connection refused for url: http://hospitals.pmjay.gov.in/Search/
+[2026-06-19T11:14:35] [fast-spec] === START (workers=10, batch=200, limit=20, dry=True) ===
+[2026-06-19T11:14:35] [fast-spec] Bootstrapping session cookie from /Search/ …
+[2026-06-19T11:14:35] [fast-spec]   cookies acquired: ['APP_encrypted', 'TS014ff2a1', 'JSESSIONID', 'TS01603562']
+[2026-06-19T11:14:35] [fast-spec]   sanity GET size=33994 checked-hosp=2
+[2026-06-19T11:14:36] [fast-spec] Loaded 34123 rows from hospitals.csv
+[2026-06-19T11:14:36] [fast-spec] Progress cache: 34123 entries (23197 non-empty)
+[2026-06-19T11:14:36] [fast-spec] Loaded 91 speciality codes
+[2026-06-19T11:14:36] [fast-spec] Hospitals to fetch: 9459
+[2026-06-19T11:14:36] [fast-spec]   limited to 20 (--limit)
+[2026-06-19T11:14:37] [fast-spec]   20/20 done  ok=0 empty=10926 forbidden=0 errors=0  14.1/s  ETA 0 min
+[2026-06-19T11:14:37] [fast-spec] Fetch phase done in 0.0 min. ok=0 forbidden=0 errors=0
+[2026-06-19T11:14:37] [fast-spec] Dry-run — not writing hospitals.csv/json.
+[2026-06-19T11:16:41] [fast-spec] === START (workers=15, batch=200, limit=0, dry=True) ===
+[2026-06-19T11:16:41] [fast-spec] Bootstrapping session cookie from /Search/ …
+[2026-06-19T11:16:42] [fast-spec]   cookies acquired: ['APP_encrypted', 'TS014ff2a1', 'JSESSIONID', 'TS01603562']
+[2026-06-19T11:16:42] [fast-spec]   sanity GET size=33994 checked-hosp=2
+[2026-06-19T11:16:42] [fast-spec] Loaded 34123 rows from hospitals.csv
+[2026-06-19T11:16:42] [fast-spec] Progress cache: 34123 entries (23197 non-empty)
+[2026-06-19T11:16:42] [fast-spec] Loaded 91 speciality codes
+[2026-06-19T11:16:42] [fast-spec] Hospitals to fetch: 9459
+[2026-06-19T11:16:50] [fast-spec]   200/9459 done  ok=0 empty=10926 forbidden=0 errors=0  26.8/s  ETA 6 min
+[2026-06-19T11:16:56] [fast-spec]   400/9459 done  ok=0 empty=10926 forbidden=0 errors=0  29.3/s  ETA 5 min
+[2026-06-19T11:17:02] [fast-spec]   600/9459 done  ok=0 empty=10926 forbidden=0 errors=0  30.4/s  ETA 5 min
+[2026-06-19T11:17:08] [fast-spec]   800/9459 done  ok=0 empty=10926 forbidden=0 errors=0  30.8/s  ETA 5 min
+[2026-06-19T11:17:14] [fast-spec]   1000/9459 done  ok=0 empty=10926 forbidden=0 errors=0  31.0/s  ETA 5 min
+[2026-06-19T11:17:21] [fast-spec]   1200/9459 done  ok=0 empty=10926 forbidden=0 errors=0  31.2/s  ETA 4 min
+[2026-06-19T11:17:26] [fast-spec]   1400/9459 done  ok=0 empty=10926 forbidden=0 errors=0  31.6/s  ETA 4 min
+[2026-06-19T11:17:32] [fast-spec]   1600/9459 done  ok=0 empty=10926 forbidden=0 errors=0  31.8/s  ETA 4 min
+[2026-06-19T11:17:39] [fast-spec]   1800/9459 done  ok=0 empty=10926 forbidden=0 errors=0  31.8/s  ETA 4 min
+[2026-06-19T11:17:52] [fast-spec]   2000/9459 done  ok=0 empty=10926 forbidden=0 errors=0  28.5/s  ETA 4 min
+[2026-06-19T11:18:08] [fast-spec]   2200/9459 done  ok=0 empty=10926 forbidden=0 errors=0  25.5/s  ETA 5 min
+[2026-06-19T11:18:26] [fast-spec]   2400/9459 done  ok=0 empty=10926 forbidden=0 errors=0  23.0/s  ETA 5 min
+[2026-06-19T11:18:46] [fast-spec] === START (workers=8, batch=200, limit=0, dry=True) ===
+[2026-06-19T11:18:46] [fast-spec] Bootstrapping session cookie from /Search/ …
+[2026-06-19T11:18:46] [fast-spec]   cookies acquired: ['APP_encrypted', 'TS014ff2a1', 'JSESSIONID', 'TS01603562']
+[2026-06-19T11:18:46] [fast-spec]   sanity GET size=33994 checked-hosp=2
+[2026-06-19T11:18:46] [fast-spec] Loaded 34123 rows from hospitals.csv
+[2026-06-19T11:18:46] [fast-spec] Progress cache: 34123 entries (23197 non-empty)
+[2026-06-19T11:18:46] [fast-spec] Loaded 91 speciality codes
+[2026-06-19T11:18:46] [fast-spec] Hospitals to fetch: 9459
+[2026-06-19T11:18:57] [fast-spec]   200/9459 done  ok=0 empty=10926 forbidden=0 errors=0  19.1/s  ETA 8 min
+[2026-06-19T11:19:07] [fast-spec]   400/9459 done  ok=0 empty=10926 forbidden=0 errors=0  19.6/s  ETA 8 min
+[2026-06-19T11:19:17] [fast-spec]   600/9459 done  ok=0 empty=10926 forbidden=0 errors=0  19.7/s  ETA 7 min
+[2026-06-19T11:19:27] [fast-spec]   800/9459 done  ok=0 empty=10926 forbidden=0 errors=0  19.8/s  ETA 7 min
+[2026-06-19T11:19:36] [fast-spec]   1000/9459 done  ok=0 empty=10926 forbidden=0 errors=0  20.1/s  ETA 7 min
+[2026-06-19T11:19:47] [fast-spec]   1200/9459 done  ok=0 empty=10926 forbidden=0 errors=0  19.8/s  ETA 7 min
+[2026-06-19T11:19:56] [fast-spec]   1400/9459 done  ok=0 empty=10926 forbidden=0 errors=1  19.9/s  ETA 7 min
+[2026-06-19T11:20:06] [fast-spec]   1600/9459 done  ok=0 empty=10926 forbidden=0 errors=1  20.0/s  ETA 7 min
+[2026-06-19T11:20:16] [fast-spec]   1800/9459 done  ok=0 empty=10926 forbidden=0 errors=1  20.1/s  ETA 6 min
+[2026-06-19T11:20:31] [fast-spec]   2000/9459 done  ok=0 empty=10926 forbidden=0 errors=1  19.0/s  ETA 7 min
+[2026-06-19T11:20:49] [fast-spec]   2200/9459 done  ok=0 empty=10926 forbidden=0 errors=1  17.9/s  ETA 7 min
+[2026-06-19T11:21:07] [fast-spec]   2400/9459 done  ok=0 empty=10926 forbidden=0 errors=1  17.0/s  ETA 7 min
+[2026-06-19T11:21:25] [fast-spec]   2600/9459 done  ok=0 empty=10926 forbidden=0 errors=1  16.4/s  ETA 7 min
+[2026-06-19T11:21:42] [fast-spec]   2800/9459 done  ok=0 empty=10926 forbidden=0 errors=1  16.0/s  ETA 7 min
+[2026-06-19T11:22:00] [fast-spec]   3000/9459 done  ok=0 empty=10926 forbidden=0 errors=1  15.5/s  ETA 7 min
+[2026-06-19T11:22:18] [fast-spec]   3200/9459 done  ok=0 empty=10926 forbidden=0 errors=1  15.1/s  ETA 7 min
+[2026-06-19T11:22:38] [fast-spec]   3400/9459 done  ok=0 empty=10926 forbidden=0 errors=1  14.7/s  ETA 7 min
+[2026-06-19T11:22:56] [fast-spec]   3600/9459 done  ok=0 empty=10926 forbidden=0 errors=1  14.4/s  ETA 7 min
+[2026-06-19T11:23:13] [fast-spec]   3800/9459 done  ok=0 empty=10926 forbidden=0 errors=1  14.2/s  ETA 7 min
+[2026-06-19T11:23:30] [fast-spec]   4000/9459 done  ok=0 empty=10926 forbidden=0 errors=1  14.1/s  ETA 6 min
+[2026-06-19T11:23:48] [fast-spec]   4200/9459 done  ok=0 empty=10926 forbidden=0 errors=1  13.9/s  ETA 6 min
+[2026-06-19T11:24:06] [fast-spec]   4400/9459 done  ok=0 empty=10926 forbidden=0 errors=1  13.8/s  ETA 6 min
+[2026-06-19T11:24:25] [fast-spec]   4600/9459 done  ok=0 empty=10926 forbidden=0 errors=1  13.6/s  ETA 6 min
+[2026-06-19T11:24:43] [fast-spec]   4800/9459 done  ok=0 empty=10926 forbidden=0 errors=1  13.5/s  ETA 6 min
+[2026-06-19T11:24:55] [fast-spec]   5000/9459 done  ok=0 empty=10926 forbidden=0 errors=1  13.6/s  ETA 5 min
+[2026-06-19T11:25:05] [fast-spec]   5200/9459 done  ok=0 empty=10926 forbidden=0 errors=1  13.7/s  ETA 5 min
+[2026-06-19T11:25:15] [fast-spec]   5400/9459 done  ok=0 empty=10926 forbidden=0 errors=1  13.9/s  ETA 5 min
+[2026-06-19T11:25:25] [fast-spec]   5600/9459 done  ok=0 empty=10926 forbidden=0 errors=1  14.0/s  ETA 5 min
+[2026-06-19T11:25:35] [fast-spec]   5800/9459 done  ok=0 empty=10926 forbidden=0 errors=1  14.2/s  ETA 4 min
+[2026-06-19T11:25:44] [fast-spec]   6000/9459 done  ok=0 empty=10926 forbidden=0 errors=1  14.4/s  ETA 4 min
+[2026-06-19T11:25:55] [fast-spec]   6200/9459 done  ok=0 empty=10926 forbidden=0 errors=1  14.5/s  ETA 4 min
+[2026-06-19T11:26:07] [fast-spec]   6400/9459 done  ok=0 empty=10926 forbidden=0 errors=1  14.5/s  ETA 4 min
+[2026-06-19T11:26:19] [fast-spec]   6600/9459 done  ok=0 empty=10926 forbidden=0 errors=1  14.6/s  ETA 3 min
+[2026-06-19T11:26:30] [fast-spec]   6800/9459 done  ok=0 empty=10926 forbidden=0 errors=1  14.7/s  ETA 3 min
+[2026-06-19T11:26:41] [fast-spec]   7000/9459 done  ok=0 empty=10926 forbidden=0 errors=1  14.8/s  ETA 3 min
+[2026-06-19T11:26:51] [fast-spec]   7200/9459 done  ok=0 empty=10926 forbidden=0 errors=1  14.9/s  ETA 3 min
+[2026-06-19T11:27:01] [fast-spec]   7400/9459 done  ok=0 empty=10926 forbidden=0 errors=1  15.0/s  ETA 2 min
+[2026-06-19T11:27:11] [fast-spec]   7600/9459 done  ok=0 empty=10926 forbidden=0 errors=1  15.0/s  ETA 2 min
+[2026-06-19T11:27:22] [fast-spec]   7800/9459 done  ok=0 empty=10926 forbidden=0 errors=2  15.1/s  ETA 2 min
+[2026-06-19T11:27:32] [fast-spec]   8000/9459 done  ok=0 empty=10926 forbidden=0 errors=2  15.2/s  ETA 2 min
+[2026-06-19T11:27:43] [fast-spec]   8200/9459 done  ok=0 empty=10926 forbidden=0 errors=2  15.3/s  ETA 1 min
+[2026-06-19T11:27:54] [fast-spec]   8400/9459 done  ok=0 empty=10926 forbidden=0 errors=2  15.3/s  ETA 1 min
+[2026-06-19T11:28:06] [fast-spec]   8600/9459 done  ok=0 empty=10926 forbidden=0 errors=2  15.4/s  ETA 1 min
+[2026-06-19T11:28:20] [fast-spec]   8800/9459 done  ok=0 empty=10926 forbidden=0 errors=2  15.3/s  ETA 1 min
+[2026-06-19T11:28:32] [fast-spec]   9000/9459 done  ok=0 empty=10926 forbidden=0 errors=2  15.4/s  ETA 0 min
+[2026-06-19T11:28:44] [fast-spec]   9200/9459 done  ok=0 empty=10926 forbidden=0 errors=2  15.4/s  ETA 0 min
+[2026-06-19T11:28:58] [fast-spec] === START (workers=8, batch=200, limit=0, dry=True) ===
+[2026-06-19T11:28:58] [fast-spec] Bootstrapping session cookie from /Search/ …
+[2026-06-19T11:28:58] [fast-spec]   cookies acquired: ['APP_encrypted', 'TS014ff2a1', 'JSESSIONID', 'TS01603562']
+[2026-06-19T11:28:59] [fast-spec]   sanity GET size=33994 checked-hosp=2
+[2026-06-19T11:28:59] [fast-spec] Loaded 34123 rows from hospitals.csv
+[2026-06-19T11:28:59] [fast-spec] Progress cache: 34123 entries (23197 non-empty)
+[2026-06-19T11:28:59] [fast-spec] Loaded 91 speciality codes
+[2026-06-19T11:28:59] [fast-spec] Hospitals to fetch: 9459
+[2026-06-19T11:29:10] [fast-spec]   200/9459 done  ok=0 empty=10926 forbidden=0 errors=0  17.4/s  ETA 9 min
+[2026-06-19T11:29:22] [fast-spec]   400/9459 done  ok=0 empty=10926 forbidden=0 errors=0  17.0/s  ETA 9 min
+[2026-06-19T11:29:35] [fast-spec]   600/9459 done  ok=0 empty=10926 forbidden=0 errors=0  16.6/s  ETA 9 min
+[2026-06-19T11:29:48] [fast-spec]   800/9459 done  ok=0 empty=10926 forbidden=0 errors=0  16.4/s  ETA 9 min
+[2026-06-19T11:30:00] [fast-spec]   1000/9459 done  ok=0 empty=10926 forbidden=0 errors=0  16.3/s  ETA 9 min
+[2026-06-19T11:30:12] [fast-spec]   1200/9459 done  ok=0 empty=10926 forbidden=0 errors=0  16.3/s  ETA 8 min
+[2026-06-19T11:30:21] [fast-spec]   1400/9459 done  ok=0 empty=10926 forbidden=0 errors=0  16.9/s  ETA 8 min
+[2026-06-19T11:30:31] [fast-spec]   1600/9459 done  ok=0 empty=10926 forbidden=0 errors=0  17.4/s  ETA 8 min
+[2026-06-19T11:30:40] [fast-spec]   1800/9459 done  ok=0 empty=10926 forbidden=0 errors=0  17.7/s  ETA 7 min
+[2026-06-19T11:30:55] [fast-spec]   2000/9459 done  ok=0 empty=10926 forbidden=0 errors=0  17.1/s  ETA 7 min
+[2026-06-19T11:31:13] [fast-spec]   2200/9459 done  ok=0 empty=10926 forbidden=0 errors=0  16.3/s  ETA 7 min
+[2026-06-19T11:31:30] [fast-spec]   2400/9459 done  ok=0 empty=10926 forbidden=0 errors=0  15.8/s  ETA 7 min
+[2026-06-19T11:31:48] [fast-spec]   2600/9459 done  ok=0 empty=10926 forbidden=0 errors=0  15.3/s  ETA 7 min
+[2026-06-19T11:32:06] [fast-spec]   2800/9459 done  ok=0 empty=10926 forbidden=0 errors=0  15.0/s  ETA 7 min
+[2026-06-19T11:32:24] [fast-spec]   3000/9459 done  ok=0 empty=10926 forbidden=0 errors=0  14.6/s  ETA 7 min
+[2026-06-19T11:32:42] [fast-spec]   3200/9459 done  ok=0 empty=10926 forbidden=0 errors=0  14.3/s  ETA 7 min
+[2026-06-19T11:33:00] [fast-spec]   3400/9459 done  ok=0 empty=10926 forbidden=0 errors=0  14.1/s  ETA 7 min
+[2026-06-19T11:33:18] [fast-spec]   3600/9459 done  ok=0 empty=10926 forbidden=0 errors=0  13.9/s  ETA 7 min
+[2026-06-19T11:33:36] [fast-spec]   3800/9459 done  ok=0 empty=10926 forbidden=0 errors=0  13.7/s  ETA 7 min
+[2026-06-19T11:33:54] [fast-spec]   4000/9459 done  ok=0 empty=10926 forbidden=0 errors=0  13.6/s  ETA 7 min
+[2026-06-19T11:34:11] [fast-spec]   4200/9459 done  ok=0 empty=10926 forbidden=0 errors=0  13.4/s  ETA 7 min
+[2026-06-19T11:34:29] [fast-spec]   4400/9459 done  ok=0 empty=10926 forbidden=0 errors=0  13.3/s  ETA 6 min
+[2026-06-19T11:34:48] [fast-spec]   4600/9459 done  ok=0 empty=10926 forbidden=0 errors=0  13.2/s  ETA 6 min
+[2026-06-19T11:35:05] [fast-spec]   4800/9459 done  ok=0 empty=10926 forbidden=0 errors=0  13.1/s  ETA 6 min
+[2026-06-19T11:35:16] [fast-spec]   5000/9459 done  ok=0 empty=10926 forbidden=0 errors=0  13.2/s  ETA 6 min
+[2026-06-19T11:35:26] [fast-spec]   5200/9459 done  ok=0 empty=10926 forbidden=0 errors=0  13.4/s  ETA 5 min
+[2026-06-19T11:35:35] [fast-spec]   5400/9459 done  ok=0 empty=10926 forbidden=0 errors=0  13.6/s  ETA 5 min
+[2026-06-19T11:35:44] [fast-spec]   5600/9459 done  ok=0 empty=10926 forbidden=0 errors=0  13.8/s  ETA 5 min
+[2026-06-19T11:35:53] [fast-spec]   5800/9459 done  ok=0 empty=10926 forbidden=0 errors=0  14.0/s  ETA 4 min
+[2026-06-19T11:36:02] [fast-spec]   6000/9459 done  ok=0 empty=10926 forbidden=0 errors=0  14.2/s  ETA 4 min
+[2026-06-19T11:36:12] [fast-spec]   6200/9459 done  ok=0 empty=10926 forbidden=0 errors=0  14.3/s  ETA 4 min
+[2026-06-19T11:36:22] [fast-spec]   6400/9459 done  ok=0 empty=10926 forbidden=0 errors=0  14.4/s  ETA 4 min
+[2026-06-19T11:36:31] [fast-spec]   6600/9459 done  ok=0 empty=10926 forbidden=0 errors=0  14.6/s  ETA 3 min
+[2026-06-19T11:36:41] [fast-spec]   6800/9459 done  ok=0 empty=10926 forbidden=0 errors=0  14.7/s  ETA 3 min
+[2026-06-19T11:36:50] [fast-spec]   7000/9459 done  ok=0 empty=10926 forbidden=0 errors=0  14.9/s  ETA 3 min
+[2026-06-19T11:37:00] [fast-spec]   7200/9459 done  ok=0 empty=10926 forbidden=0 errors=0  15.0/s  ETA 3 min
+[2026-06-19T11:37:09] [fast-spec]   7400/9459 done  ok=0 empty=10926 forbidden=0 errors=0  15.1/s  ETA 2 min
+[2026-06-19T11:37:18] [fast-spec]   7600/9459 done  ok=0 empty=10926 forbidden=0 errors=0  15.2/s  ETA 2 min
+[2026-06-19T11:37:28] [fast-spec]   7800/9459 done  ok=0 empty=10926 forbidden=0 errors=0  15.3/s  ETA 2 min
+[2026-06-19T11:37:37] [fast-spec]   8000/9459 done  ok=0 empty=10926 forbidden=0 errors=0  15.4/s  ETA 2 min
+[2026-06-19T11:37:45] [fast-spec]   8200/9459 done  ok=0 empty=10926 forbidden=0 errors=0  15.6/s  ETA 1 min
+[2026-06-19T11:37:54] [fast-spec]   8400/9459 done  ok=0 empty=10926 forbidden=0 errors=0  15.7/s  ETA 1 min
+[2026-06-19T11:38:03] [fast-spec]   8600/9459 done  ok=0 empty=10926 forbidden=0 errors=0  15.8/s  ETA 1 min
+[2026-06-19T11:38:14] [fast-spec]   8800/9459 done  ok=0 empty=10926 forbidden=0 errors=0  15.9/s  ETA 1 min
+[2026-06-19T11:38:23] [fast-spec]   9000/9459 done  ok=0 empty=10926 forbidden=0 errors=0  16.0/s  ETA 0 min
+[2026-06-19T11:38:32] [fast-spec]   9200/9459 done  ok=0 empty=10926 forbidden=0 errors=0  16.1/s  ETA 0 min
+[2026-06-19T11:38:41] [fast-spec]   9400/9459 done  ok=0 empty=10926 forbidden=11 errors=0  16.1/s  ETA 0 min
+[2026-06-19T11:38:44] [fast-spec]   9459/9459 done  ok=0 empty=10926 forbidden=11 errors=0  16.2/s  ETA 0 min
+[2026-06-19T11:38:44] [fast-spec] Fetch phase done in 9.8 min. ok=0 forbidden=11 errors=0
+[2026-06-19T11:38:44] [fast-spec] Dry-run — not writing hospitals.csv/json.
+[2026-06-19T11:48:43] [hem]   POST https://apisprod.nha.gov.in/pmjay/prodhem/hem/external/hospital/list -> 400 attempt 1
+[2026-06-19T11:48:45] [hem]   POST https://apisprod.nha.gov.in/pmjay/prodhem/hem/external/hospital/list -> 400 attempt 2
+[2026-06-19T11:48:49] [hem]   POST https://apisprod.nha.gov.in/pmjay/prodhem/hem/external/hospital/list -> 400 attempt 3
+[2026-06-19T11:48:55] [hem]   POST https://apisprod.nha.gov.in/pmjay/prodhem/hem/external/hospital/list -> 400 attempt 4
+[2026-06-19T11:51:31] [hem] ============================================================
+[2026-06-19T11:51:31] [hem] HEM hospital scraper starting
+[2026-06-19T11:51:31] [hem] Fetching state list ...
+[2026-06-19T11:51:31] [hem]   44 states (incl. CAPF/CGHS)
+[2026-06-19T11:51:31] [hem] Fetching specialities ...
+[2026-06-19T11:51:31] [hem]   74 active specialities
+[2026-06-19T11:51:31] [hem] Fetching state-wise counts ...
+[2026-06-19T11:51:32] [hem]   36 state counts
+[2026-06-19T11:51:32] [hem] Real state codes: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '88', '89', '95', '96', '97', '99']
+[2026-06-19T11:51:32] [hem] Fetching all hospitals (no type filter) ...
+[2026-06-19T11:51:34] [hem]   starting pagination: 37608 hospitals across 1254 pages
+[2026-06-19T11:53:29] [hem]     page 50/1254, got 1470 so far
+[2026-06-19T11:55:26] [hem] ============================================================
+[2026-06-19T11:55:26] [hem] HEM hospital scraper starting
+[2026-06-19T11:55:26] [hem] Fetching state list ...
+[2026-06-19T11:55:26] [hem]   44 states (incl. CAPF/CGHS)
+[2026-06-19T11:55:26] [hem] Fetching specialities ...
+[2026-06-19T11:55:26] [hem]   74 active specialities
+[2026-06-19T11:55:26] [hem] Fetching state-wise counts ...
+[2026-06-19T11:55:27] [hem]   36 state counts
+[2026-06-19T11:55:27] [hem] Real state codes: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '88', '89', '95', '96', '97', '99']
+[2026-06-19T11:55:27] [hem] Fetching all hospitals (no type filter) ...
+[2026-06-19T11:55:29] [hem]   starting pagination: 37608 hospitals across 1254 pages
+[2026-06-19T11:55:29] [hem]   page 1/1254, 30 so far — saving partial
+[2026-06-19T11:56:10] [hem]   page 21/1254, 630 so far — saving partial
+[2026-06-19T11:56:52] [hem]   page 41/1254, 1230 so far — saving partial
+[2026-06-19T11:57:32] [hem]   page 61/1254, 1830 so far — saving partial
+[2026-06-19T11:58:13] [hem]   page 81/1254, 2430 so far — saving partial
+[2026-06-19T11:58:55] [hem]   page 101/1254, 3030 so far — saving partial
+[2026-06-19T11:59:37] [hem]   page 121/1254, 3630 so far — saving partial
+[2026-06-19T12:00:19] [hem]   page 141/1254, 4230 so far — saving partial
+[2026-06-19T12:01:02] [hem]   page 161/1254, 4830 so far — saving partial
+[2026-06-19T12:01:42] [hem]   page 181/1254, 5430 so far — saving partial
+[2026-06-19T12:02:23] [hem]   page 201/1254, 6030 so far — saving partial
+[2026-06-19T12:03:06] [hem]   page 221/1254, 6630 so far — saving partial
+[2026-06-19T12:03:53] [hem]   page 241/1254, 7230 so far — saving partial
+[2026-06-19T12:04:39] [hem]   page 261/1254, 7830 so far — saving partial
+[2026-06-19T12:05:22] [hem]   page 281/1254, 8430 so far — saving partial
+[2026-06-19T12:06:06] [hem]   page 301/1254, 9030 so far — saving partial
+[2026-06-19T12:06:48] [hem]   page 321/1254, 9630 so far — saving partial
+[2026-06-19T12:07:32] [hem]   page 341/1254, 10230 so far — saving partial
+[2026-06-19T12:08:18] [hem]   page 361/1254, 10830 so far — saving partial
+[2026-06-19T12:09:01] [hem]   page 381/1254, 11430 so far — saving partial
+[2026-06-19T12:09:46] [hem]   page 401/1254, 12030 so far — saving partial
+[2026-06-19T12:10:30] [hem]   page 421/1254, 12630 so far — saving partial
+[2026-06-19T12:11:15] [hem]   page 441/1254, 13230 so far — saving partial
+[2026-06-19T12:11:59] [hem]   page 461/1254, 13830 so far — saving partial
+[2026-06-19T12:12:40] [hem]   page 481/1254, 14430 so far — saving partial
+[2026-06-19T12:13:25] [hem]   page 501/1254, 15030 so far — saving partial
+[2026-06-19T12:14:09] [hem]   page 521/1254, 15630 so far — saving partial
+[2026-06-19T12:14:56] [hem]   page 541/1254, 16230 so far — saving partial
+[2026-06-19T12:15:37] [hem]   page 561/1254, 16830 so far — saving partial
+[2026-06-19T12:16:26] [hem]   page 581/1254, 17430 so far — saving partial
+[2026-06-19T12:17:09] [hem]   page 601/1254, 18030 so far — saving partial
+[2026-06-19T12:17:50] [hem]   page 621/1254, 18630 so far — saving partial
+[2026-06-19T12:18:32] [hem]   page 641/1254, 19230 so far — saving partial
+[2026-06-19T12:19:12] [hem]   page 661/1254, 19830 so far — saving partial
+[2026-06-19T12:19:55] [hem]   page 681/1254, 20430 so far — saving partial
+[2026-06-19T12:20:40] [hem]   page 701/1254, 21030 so far — saving partial
+[2026-06-19T12:21:24] [hem]   page 721/1254, 21630 so far — saving partial
+[2026-06-19T12:22:06] [hem]   page 741/1254, 22230 so far — saving partial
+[2026-06-19T12:22:46] [hem]   page 761/1254, 22830 so far — saving partial
+[2026-06-19T12:23:26] [hem]   page 781/1254, 23430 so far — saving partial
+[2026-06-19T12:24:09] [hem]   page 801/1254, 24030 so far — saving partial
+[2026-06-19T12:24:52] [hem]   page 821/1254, 24630 so far — saving partial
+[2026-06-19T12:25:38] [hem]   page 841/1254, 25230 so far — saving partial
+[2026-06-19T12:26:20] [hem]   page 861/1254, 25830 so far — saving partial
+[2026-06-19T12:27:00] [hem]   page 881/1254, 26430 so far — saving partial
+[2026-06-19T12:27:42] [hem]   page 901/1254, 27030 so far — saving partial
+[2026-06-19T12:28:22] [hem]   page 921/1254, 27630 so far — saving partial
+[2026-06-19T12:29:05] [hem]   page 941/1254, 28230 so far — saving partial
+[2026-06-19T12:29:51] [hem]   page 961/1254, 28830 so far — saving partial
+[2026-06-19T12:30:32] [hem]   page 981/1254, 29430 so far — saving partial
+[2026-06-19T12:31:19] [hem]   page 1001/1254, 30030 so far — saving partial
+[2026-06-19T12:32:04] [hem]   page 1021/1254, 30630 so far — saving partial
+[2026-06-19T12:32:47] [hem]   page 1041/1254, 31230 so far — saving partial
+[2026-06-19T12:33:30] [hem]   page 1061/1254, 31830 so far — saving partial
+[2026-06-19T12:34:14] [hem]   page 1081/1254, 32430 so far — saving partial
+[2026-06-19T12:35:00] [hem]   page 1101/1254, 33030 so far — saving partial
+[2026-06-19T12:35:45] [hem]   page 1121/1254, 33630 so far — saving partial
+[2026-06-19T12:36:29] [hem]   page 1141/1254, 34230 so far — saving partial
+[2026-06-19T12:37:14] [hem]   page 1161/1254, 34830 so far — saving partial
+[2026-06-19T12:37:56] [hem]   page 1181/1254, 35430 so far — saving partial
+[2026-06-19T12:38:39] [hem]   page 1201/1254, 36030 so far — saving partial
+[2026-06-19T12:39:20] [hem]   page 1221/1254, 36630 so far — saving partial
+[2026-06-19T12:40:02] [hem]   page 1241/1254, 37230 so far — saving partial
+[2026-06-19T12:40:31] [hem]   page 1254/1254, 37609 so far — saving partial
+[2026-06-19T12:40:31] [hem]   fetched 37609 total
+[2026-06-19T12:40:31] [hem]   unique: 36615
+[2026-06-19T12:40:31] [hem] Wrote hem_raw.json (36615 hospitals)
+[2026-06-19T12:40:31] [hem] By state:
+[2026-06-19T12:40:31] [hem]   UTTAR PRADESH                            6412
+[2026-06-19T12:40:31] [hem]   MAHARASHTRA                              4886
+[2026-06-19T12:40:31] [hem]   KARNATAKA                                3581
+[2026-06-19T12:40:31] [hem]   ANDHRA PRADESH                           2476
+[2026-06-19T12:40:31] [hem]   TAMIL NADU                               2314
+[2026-06-19T12:40:31] [hem]   GUJARAT                                  1983
+[2026-06-19T12:40:31] [hem]   RAJASTHAN                                1909
+[2026-06-19T12:40:31] [hem]   MADHYA PRADESH                           1885
+[2026-06-19T12:40:31] [hem]   CHHATTISGARH                             1703
+[2026-06-19T12:40:31] [hem]   TELANGANA                                1526
+[2026-06-19T12:40:31] [hem]   HARYANA                                  1323
+[2026-06-19T12:40:31] [hem]   BIHAR                                    1283
+[2026-06-19T12:40:31] [hem]   PUNJAB                                   868
+[2026-06-19T12:40:31] [hem]   ODISHA                                   859
+[2026-06-19T12:40:31] [hem]   UTTARAKHAND                              564
+[2026-06-19T12:40:31] [hem]   KERALA                                   545
+[2026-06-19T12:40:31] [hem]   JHARKHAND                                540
+[2026-06-19T12:40:31] [hem]   HIMACHAL PRADESH                         302
+[2026-06-19T12:40:31] [hem]   ASSAM                                    294
+[2026-06-19T12:40:31] [hem]   JAMMU AND KASHMIR                        271
+[2026-06-19T12:40:31] [hem]   DELHI                                    235
+[2026-06-19T12:40:31] [hem]   MEGHALAYA                                181
+[2026-06-19T12:40:31] [hem]   TRIPURA                                  147
+[2026-06-19T12:40:31] [hem]   WEST BENGAL                              116
+[2026-06-19T12:40:31] [hem]   MIZORAM                                  86
+[2026-06-19T12:40:31] [hem]   NAGALAND                                 64
+[2026-06-19T12:40:31] [hem]   MANIPUR                                  61
+[2026-06-19T12:40:31] [hem]   ARUNACHAL PRADESH                        50
+[2026-06-19T12:40:31] [hem]   PUDUCHERRY                               33
+[2026-06-19T12:40:31] [hem]   CHANDIGARH                               30
+[2026-06-19T12:40:31] [hem]   GOA                                      26
+[2026-06-19T12:40:31] [hem]   DNH AND DD                               20
+[2026-06-19T12:40:31] [hem]   SIKKIM                                   19
+[2026-06-19T12:40:31] [hem]   LADAKH                                   11
+[2026-06-19T12:40:31] [hem]   ANDAMAN AND NICOBAR ISLANDS              7
+[2026-06-19T12:40:31] [hem]   LAKSHADWEEP                              5
