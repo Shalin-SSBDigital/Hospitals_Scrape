@@ -8,9 +8,9 @@
 >
 > ---
 >
-> ## HEM endpoints (used by `scrape_hem2.py` + `merge_hem.py`)
+> ## HEM endpoints (used by `scrape_hem_portal.py` + `build_hem_portal.py`)
 >
-> **Base URL:** `https://apisprod.nha.gov.in/pmjay/prodhem`
+> **Base URL:** `https://apisprod.nha.gov.in/pmjay/prodhem`  (prodump for state/district lookups)
 > **UI:** `https://hem.nha.gov.in` — loads a 14 MB React bundle that calls these APIs.
 > **Auth:** none. Browser-like headers required (`Referer: https://hem.nha.gov.in/`).
 >
@@ -20,13 +20,24 @@
 > |---|---|
 > | Method | POST |
 > | Path | `/hem/external/hospital/list` |
-> | Body | `{ "facilityName": "", "pageNo": 1, "size": 30, "card": "", "value": "", "pincode": "" }` |
+> | Body | `{ "stateCode": "<code>", "facilityName": "", "pageNo": 1, "size": 30, "card": "", "value": "", "pincode": "" }` |
 > | Returns | Spring-style paginated JSON: `content[]` of 42 fields per hospital, plus `totalElements`, `totalPages`, `last`. |
 > | Max size | 30 per page (server returns 400 if larger) |
-> | Total | 37,608 hospitals across 1,254 pages |
-> | Filters | `card=hosp_type_code` with `value=G` (Government, 19,768) or `P` (Private, 17,828). `facilityName` (LIKE search). `pincode` (exact). **State/district/speciality cards return all 37k** — they are not implemented server-side, only as UI cards. |
+> | Total | 36,618 hospitals across 36 states/UTs (excluding scheme aggregates CAPF/CGHS/ESIC/PSU/NHCP) |
+> | Filters | `stateCode` (works — 2,500 on avg per state). `card=hosp_type_code` with `value=G` or `P` (works). `facilityName` (LIKE search). `pincode` (exact). `districtCode` and other `card` values are no-ops server-side. |
 >
-> Per-hospital fields: `hospitalId` (numeric), `hospName`, `hospAddress`, `hospCity`, `hospPin`, `hospMobileNumber`, `hospEmailId`, `hospContactNumber`, `stateCode`, `districtCode`, `hospLatitude`, `hospLongitude`, `specialityCode` (comma-list of HEM speciality ids), `schemeCode` (e.g. PMJAY, CGHS, CAPF, SEC, SMILE, NAMASTE, PMCARE, MMLSAY, BOCW, MORTH), `accredited` (Y/N), `hospTypeCode` (G/P/N/D), `nodalOfficerName`, `nodalOfficerNumber`, `facilityId` (the merge key — same scheme as PMJAY UUID, e.g. `HOSP27P26277430`), `hospWebsite`, `type` (Hospital/Diagnostic Centre/...), `empaneledDate`, `establishmentYear`, `hfrId`, `createdDate`, `updatedDate`.
+> Per-hospital fields: `hospitalId` (numeric), `hospName`, `hospAddress`, `hospCity`, `hospPin`, `hospMobileNumber`, `hospEmailId`, `hospContactNumber`, `stateCode`, `districtCode`, `hospLatitude`, `hospLongitude`, `specialityCode` (comma-list of HEM speciality ids), `schemeCode` (e.g. PMJAY, CGHS, CAPF, SEC, SMILE, NAMASTE, PMCARE, MMLSAY, BOCW, MORTH), `accredited` (Y/N), `hospTypeCode` (G/P/N/D), `nodalOfficerName`, `nodalOfficerNumber`, `facilityId` (the merge key with PMJAY — same scheme as PMJAY UUID, e.g. `HOSP27P26277430`), `hospWebsite`, `type` (Hospital/Diagnostic Centre/...), `empaneledDate`, `establishmentYear`, `hfrId`, `createdDate`, `updatedDate`, `deempanelStatus`, `gcStatus`, `enrlStatus`, `hospRating`.
+>
+> ### District name lookup (the missing piece for the 24-column output)
+>
+> | | |
+> |---|---|
+> | Method | POST |
+> | Path | `https://apisprod.nha.gov.in/pmjay/prodump/ump/ump/state/getDistrictCodeList` |
+> | Body | `{ "stateCode": "<code>" }` |
+> | Returns | Dict of `{DISTRICT_NAME: <numeric_code>, ...}` for that state. 5,500 districts total across 36 states. |
+> | Used in | `scrape_hem_portal.py:fetch_districts_for_state` — adds `_stateName` and `_districtName` to each HEM row. |
+> | Discovered by | Clicking "By District" in the HEM UI then selecting a state. |
 >
 > ### Specialities
 >
@@ -36,7 +47,7 @@
 > | Path | `/hem/hbp/get/specialities/list` |
 > | Body | `{ "status": "Active" }` |
 > | Returns | 74 active specialities: `specialityid` (e.g. `100001`), `specialitycode` (e.g. `BM`), `specialityname` (e.g. `Burns Management`). |
-> | Used in | `scrape_hem2.py:fetch_specialities`, `merge_hem.py:hem_to_csv_row` to map comma-list `specialityCode` to human-readable names. |
+> | Used in | `build_hem_portal.py` to map comma-list `specialityCode` to human-readable names. |
 >
 > ### State list
 >
@@ -46,14 +57,6 @@
 > | Path | `https://apisprod.nha.gov.in/pmjay/prodump/ump/ump/fetch/statelist` |
 > | Returns | `{"StateList": {"ANDHRA PRADESH": "28", "DELHI": "7", ...}}` — 44 entries including CAPF, CGHS, ESIC, PSU, NHCP. |
 >
-> ### State-wise counts
->
-> | | |
-> |---|---|
-> | Method | GET |
-> | Path | `/hem/external/profile/getHospitalCountByStateWise` |
-> | Returns | `{"28": {"data": {"Government": 1415, "Private": 1057, "NABH Accrediated": 27}}, ...}` |
->
 > ### Per-hospital profile (non-functional in public API)
 >
 > | | |
@@ -62,14 +65,6 @@
 > | Path | `/hem/external/hospital/profile` |
 > | Body | `{ "hospInfoId": <numeric hospitalId> }` |
 > | Returns | Always 400 with `{"errorcode":404,"error":"Data Not Found."}` — backend is wired but always 404. **Not usable for scraping.** |
->
-> ### Lookup codes
->
-> | | |
-> |---|---|
-> | Method | GET |
-> | Path | `/hem/external/getLookupCodes` |
-> | Returns | ~1000 lookup entries with `lookupCode`/`lookupValue` pairs for status codes, accreditation types, hospital facility types, CGHS cities, etc. |
 >
 > ---
 >

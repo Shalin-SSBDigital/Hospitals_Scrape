@@ -1204,3 +1204,251 @@
 [2026-06-19T12:40:31] [hem]   LADAKH                                   11
 [2026-06-19T12:40:31] [hem]   ANDAMAN AND NICOBAR ISLANDS              7
 [2026-06-19T12:40:31] [hem]   LAKSHADWEEP                              5
+[2026-06-22T10:05:35] [hem] ============================================================
+[2026-06-22T10:05:35] [hem] HEM hospital scraper v3 (per-state, with district names)
+[2026-06-22T10:05:35] [hem] Fetching state list ...
+[2026-06-22T10:05:35] [hem]   44 states (incl. CAPF/CGHS)
+[2026-06-22T10:05:35] [hem] Fetching specialities ...
+[2026-06-22T10:05:35] [hem]   74 active specialities
+[2026-06-22T10:05:35] [hem] Fetching district lists for all states ...
+[2026-06-22T10:05:35] [hem]   JAMMU AND KASHMIR (1): 20 districts
+[2026-06-22T10:05:35] [hem]   HIMACHAL PRADESH (2): 12 districts
+[2026-06-22T10:05:35] [hem]   PUNJAB (3): 23 districts
+[2026-06-22T10:05:35] [hem]   CHANDIGARH (4): 1 districts
+[2026-06-22T10:05:35] [hem]   UTTARAKHAND (5): 13 districts
+[2026-06-22T10:05:35] [hem]   HARYANA (6): 22 districts
+[2026-06-22T10:05:35] [hem]   DELHI (7): 14 districts
+[2026-06-22T10:05:35] [hem]   RAJASTHAN (8): 51 districts
+[2026-06-22T10:05:35] [hem]   UTTAR PRADESH (9): 75 districts
+[2026-06-22T10:05:35] [hem]   BIHAR (10): 38 districts
+[2026-06-22T10:05:35] [hem]   SIKKIM (11): 6 districts
+[2026-06-22T10:05:35] [hem]   ARUNACHAL PRADESH (12): 25 districts
+[2026-06-22T10:05:35] [hem]   NAGALAND (13): 17 districts
+[2026-06-22T10:05:35] [hem]   MANIPUR (14): 16 districts
+[2026-06-22T10:05:35] [hem]   MIZORAM (15): 11 districts
+[2026-06-22T10:05:35] [hem]   TRIPURA (16): 8 districts
+[2026-06-22T10:05:35] [hem]   MEGHALAYA (17): 12 districts
+[2026-06-22T10:05:35] [hem]   ASSAM (18): 35 districts
+[2026-06-22T10:05:35] [hem]   WEST BENGAL (19): 23 districts
+[2026-06-22T10:05:36] [hem]   JHARKHAND (20): 24 districts
+[2026-06-22T10:05:36] [hem]   ODISHA (21): 30 districts
+[2026-06-22T10:05:36] [hem]   CHHATTISGARH (22): 33 districts
+[2026-06-22T10:05:36] [hem]   MADHYA PRADESH (23): 55 districts
+[2026-06-22T10:05:36] [hem]   GUJARAT (24): 33 districts
+[2026-06-22T10:05:36] [hem]   MAHARASHTRA (27): 36 districts
+[2026-06-22T10:05:36] [hem]   ANDHRA PRADESH (28): 26 districts
+[2026-06-22T10:05:36] [hem]   KARNATAKA (29): 31 districts
+[2026-06-22T10:05:36] [hem]   GOA (30): 2 districts
+[2026-06-22T10:05:36] [hem]   LAKSHADWEEP (31): 1 districts
+[2026-06-22T10:05:36] [hem]   KERALA (32): 14 districts
+[2026-06-22T10:05:36] [hem]   TAMIL NADU (33): 38 districts
+[2026-06-22T10:05:36] [hem]   PUDUCHERRY (34): 4 districts
+[2026-06-22T10:05:36] [hem]   ANDAMAN AND NICOBAR ISLANDS (35): 3 districts
+[2026-06-22T10:05:36] [hem]   TELANGANA (36): 33 districts
+[2026-06-22T10:05:36] [hem]   LADAKH (37): 2 districts
+[2026-06-22T10:05:36] [hem]   DNH AND DD (38): 3 districts
+[2026-06-22T10:05:36] [hem]   NDRF (88): 785 districts
+[2026-06-22T10:05:36] [hem]   NAMASTE (89): 785 districts
+[2026-06-22T10:05:36] [hem]   PM-CARES (95): 785 districts
+[2026-06-22T10:05:36] [hem]   SMILE (96): 785 districts
+[2026-06-22T10:05:36] [hem]   PM RAHAT (97): 785 districts
+[2026-06-22T10:05:36] [hem]   NHA (99): 785 districts
+[2026-06-22T10:05:36] [hem]   total: 5500 districts
+[2026-06-22T10:05:36] [hem] --- JAMMU AND KASHMIR (1) ---
+[2026-06-22T10:05:37] [hem]     282 hospitals, 10 pages
+[2026-06-22T10:05:49] [hem]   fetched 282
+[2026-06-22T10:05:49] [hem]   saved partial (271 total)
+[2026-06-22T10:05:49] [hem] --- HIMACHAL PRADESH (2) ---
+[2026-06-22T10:05:50] [hem]     304 hospitals, 11 pages
+[2026-06-22T10:05:58] [hem]   fetched 304
+[2026-06-22T10:05:58] [hem]   saved partial (574 total)
+[2026-06-22T10:05:58] [hem] --- PUNJAB (3) ---
+[2026-06-22T10:05:59] [hem]     942 hospitals, 32 pages
+[2026-06-22T10:06:44] [hem]   fetched 942
+[2026-06-22T10:06:44] [hem]   saved partial (1442 total)
+[2026-06-22T10:06:44] [hem] --- CHANDIGARH (4) ---
+[2026-06-22T10:06:45] [hem]     36 hospitals, 2 pages
+[2026-06-22T10:06:47] [hem]   fetched 36
+[2026-06-22T10:06:47] [hem]   saved partial (1472 total)
+[2026-06-22T10:06:47] [hem] --- UTTARAKHAND (5) ---
+[2026-06-22T10:06:48] [hem]     588 hospitals, 20 pages
+[2026-06-22T10:07:16] [hem]   fetched 588
+[2026-06-22T10:07:16] [hem]   saved partial (2036 total)
+[2026-06-22T10:07:16] [hem] --- HARYANA (6) ---
+[2026-06-22T10:07:17] [hem]     1383 hospitals, 47 pages
+[2026-06-22T10:08:31] [hem]   fetched 1383
+[2026-06-22T10:08:31] [hem]   saved partial (3359 total)
+[2026-06-22T10:08:31] [hem] --- DELHI (7) ---
+[2026-06-22T10:08:33] [hem]     312 hospitals, 11 pages
+[2026-06-22T10:08:46] [hem]   fetched 312
+[2026-06-22T10:08:47] [hem]   saved partial (3594 total)
+[2026-06-22T10:08:47] [hem] --- RAJASTHAN (8) ---
+[2026-06-22T10:08:48] [hem]     1931 hospitals, 65 pages
+[2026-06-22T10:09:54] [hem]     page 50/65, 1470 so far
+[2026-06-22T10:10:19] [hem]   fetched 1931
+[2026-06-22T10:10:19] [hem]   saved partial (5503 total)
+[2026-06-22T10:10:20] [hem] --- UTTAR PRADESH (9) ---
+[2026-06-22T10:10:21] [hem]     6712 hospitals, 224 pages
+[2026-06-22T10:11:33] [hem]     page 50/224, 1470 so far
+[2026-06-22T10:12:51] [hem]     page 100/224, 2970 so far
+[2026-06-22T10:14:08] [hem]     page 150/224, 4470 so far
+[2026-06-22T10:15:24] [hem]     page 200/224, 5970 so far
+[2026-06-22T10:16:03] [hem]   fetched 6712
+[2026-06-22T10:16:03] [hem]   saved partial (11916 total)
+[2026-06-22T10:16:03] [hem] --- BIHAR (10) ---
+[2026-06-22T10:16:05] [hem]     1355 hospitals, 46 pages
+[2026-06-22T10:17:07] [hem]   fetched 1355
+[2026-06-22T10:17:08] [hem]   saved partial (13199 total)
+[2026-06-22T10:17:08] [hem] --- SIKKIM (11) ---
+[2026-06-22T10:17:08] [hem]     19 hospitals, 1 pages
+[2026-06-22T10:17:09] [hem]   fetched 19
+[2026-06-22T10:17:09] [hem]   saved partial (13218 total)
+[2026-06-22T10:17:09] [hem] --- ARUNACHAL PRADESH (12) ---
+[2026-06-22T10:17:10] [hem]     50 hospitals, 2 pages
+[2026-06-22T10:17:11] [hem]   fetched 50
+[2026-06-22T10:17:11] [hem]   saved partial (13268 total)
+[2026-06-22T10:17:11] [hem] --- NAGALAND (13) ---
+[2026-06-22T10:17:12] [hem]     64 hospitals, 3 pages
+[2026-06-22T10:17:14] [hem]   fetched 64
+[2026-06-22T10:17:15] [hem]   saved partial (13332 total)
+[2026-06-22T10:17:15] [hem] --- MANIPUR (14) ---
+[2026-06-22T10:17:16] [hem]     62 hospitals, 3 pages
+[2026-06-22T10:17:18] [hem]   fetched 62
+[2026-06-22T10:17:19] [hem]   saved partial (13393 total)
+[2026-06-22T10:17:19] [hem] --- MIZORAM (15) ---
+[2026-06-22T10:17:20] [hem]     86 hospitals, 3 pages
+[2026-06-22T10:17:22] [hem]   fetched 86
+[2026-06-22T10:17:22] [hem]   saved partial (13479 total)
+[2026-06-22T10:17:22] [hem] --- TRIPURA (16) ---
+[2026-06-22T10:17:23] [hem]     149 hospitals, 5 pages
+[2026-06-22T10:17:29] [hem]   fetched 149
+[2026-06-22T10:17:29] [hem]   saved partial (13626 total)
+[2026-06-22T10:17:29] [hem] --- MEGHALAYA (17) ---
+[2026-06-22T10:17:30] [hem]     185 hospitals, 7 pages
+[2026-06-22T10:17:38] [hem]   fetched 185
+[2026-06-22T10:17:38] [hem]   saved partial (13807 total)
+[2026-06-22T10:17:39] [hem] --- ASSAM (18) ---
+[2026-06-22T10:17:40] [hem]     304 hospitals, 11 pages
+[2026-06-22T10:17:53] [hem]   fetched 304
+[2026-06-22T10:17:53] [hem]   saved partial (14101 total)
+[2026-06-22T10:17:54] [hem] --- WEST BENGAL (19) ---
+[2026-06-22T10:17:55] [hem]     120 hospitals, 4 pages
+[2026-06-22T10:17:58] [hem]   fetched 120
+[2026-06-22T10:17:59] [hem]   saved partial (14218 total)
+[2026-06-22T10:17:59] [hem] --- JHARKHAND (20) ---
+[2026-06-22T10:18:00] [hem]     562 hospitals, 19 pages
+[2026-06-22T10:18:25] [hem]   fetched 562
+[2026-06-22T10:18:25] [hem]   saved partial (14756 total)
+[2026-06-22T10:18:25] [hem] --- ODISHA (21) ---
+[2026-06-22T10:18:26] [hem]     863 hospitals, 29 pages
+[2026-06-22T10:19:04] [hem]   fetched 863
+[2026-06-22T10:19:04] [hem]   saved partial (15616 total)
+[2026-06-22T10:19:04] [hem] --- CHHATTISGARH (22) ---
+[2026-06-22T10:19:06] [hem]     1722 hospitals, 58 pages
+[2026-06-22T10:20:12] [hem]     page 50/58, 1470 so far
+[2026-06-22T10:20:25] [hem]   fetched 1722
+[2026-06-22T10:20:25] [hem]   saved partial (17321 total)
+[2026-06-22T10:20:25] [hem] --- MADHYA PRADESH (23) ---
+[2026-06-22T10:20:26] [hem]     1961 hospitals, 66 pages
+[2026-06-22T10:21:34] [hem]     page 50/66, 1470 so far
+[2026-06-22T10:21:58] [hem]   fetched 1961
+[2026-06-22T10:21:59] [hem]   saved partial (19206 total)
+[2026-06-22T10:21:59] [hem] --- GUJARAT (24) ---
+[2026-06-22T10:22:00] [hem]     2029 hospitals, 68 pages
+[2026-06-22T10:23:11] [hem]     page 50/68, 1470 so far
+[2026-06-22T10:23:38] [hem]   fetched 2029
+[2026-06-22T10:23:38] [hem]   saved partial (21186 total)
+[2026-06-22T10:23:39] [hem] --- MAHARASHTRA (27) ---
+[2026-06-22T10:23:40] [hem]     4971 hospitals, 166 pages
+[2026-06-22T10:24:55] [hem]     page 50/166, 1470 so far
+[2026-06-22T10:26:09] [hem]     page 100/166, 2970 so far
+[2026-06-22T10:27:26] [hem]     page 150/166, 4470 so far
+[2026-06-22T10:27:51] [hem]   fetched 4971
+[2026-06-22T10:27:52] [hem]   saved partial (26072 total)
+[2026-06-22T10:27:52] [hem] --- ANDHRA PRADESH (28) ---
+[2026-06-22T10:27:53] [hem]     2493 hospitals, 84 pages
+[2026-06-22T10:28:58] [hem]     page 50/84, 1470 so far
+[2026-06-22T10:29:45] [hem]   fetched 2493
+[2026-06-22T10:29:45] [hem]   saved partial (28548 total)
+[2026-06-22T10:29:46] [hem] --- KARNATAKA (29) ---
+[2026-06-22T10:29:47] [hem]     3590 hospitals, 120 pages
+[2026-06-22T10:30:56] [hem]     page 50/120, 1470 so far
+[2026-06-22T10:32:11] [hem]     page 100/120, 2970 so far
+[2026-06-22T10:32:43] [hem]   fetched 3590
+[2026-06-22T10:32:43] [hem]   saved partial (32129 total)
+[2026-06-22T10:32:43] [hem] --- GOA (30) ---
+[2026-06-22T10:32:44] [hem]     26 hospitals, 1 pages
+[2026-06-22T10:32:44] [hem]   fetched 26
+[2026-06-22T10:32:45] [hem]   saved partial (32155 total)
+[2026-06-22T10:32:45] [hem] --- LAKSHADWEEP (31) ---
+[2026-06-22T10:32:46] [hem]     5 hospitals, 1 pages
+[2026-06-22T10:32:46] [hem]   fetched 5
+[2026-06-22T10:32:46] [hem]   saved partial (32160 total)
+[2026-06-22T10:32:46] [hem] --- KERALA (32) ---
+[2026-06-22T10:32:47] [hem]     556 hospitals, 19 pages
+[2026-06-22T10:33:12] [hem]   fetched 556
+[2026-06-22T10:33:12] [hem]   saved partial (32705 total)
+[2026-06-22T10:33:12] [hem] --- TAMIL NADU (33) ---
+[2026-06-22T10:33:14] [hem]     2336 hospitals, 78 pages
+[2026-06-22T10:34:24] [hem]     page 50/78, 1470 so far
+[2026-06-22T10:35:06] [hem]   fetched 2336
+[2026-06-22T10:35:06] [hem]   saved partial (35021 total)
+[2026-06-22T10:35:06] [hem] --- PUDUCHERRY (34) ---
+[2026-06-22T10:35:08] [hem]     36 hospitals, 2 pages
+[2026-06-22T10:35:09] [hem]   fetched 36
+[2026-06-22T10:35:09] [hem]   saved partial (35054 total)
+[2026-06-22T10:35:09] [hem] --- ANDAMAN AND NICOBAR ISLANDS (35) ---
+[2026-06-22T10:35:10] [hem]     7 hospitals, 1 pages
+[2026-06-22T10:35:10] [hem]   fetched 7
+[2026-06-22T10:35:11] [hem]   saved partial (35061 total)
+[2026-06-22T10:35:11] [hem] --- TELANGANA (36) ---
+[2026-06-22T10:35:12] [hem]     1540 hospitals, 52 pages
+[2026-06-22T10:36:21] [hem]     page 50/52, 1470 so far
+[2026-06-22T10:36:25] [hem]   fetched 1540
+[2026-06-22T10:36:26] [hem]   saved partial (36587 total)
+[2026-06-22T10:36:26] [hem] --- LADAKH (37) ---
+[2026-06-22T10:36:27] [hem]     11 hospitals, 1 pages
+[2026-06-22T10:36:27] [hem]   fetched 11
+[2026-06-22T10:36:27] [hem]   saved partial (36598 total)
+[2026-06-22T10:36:27] [hem] --- DNH AND DD (38) ---
+[2026-06-22T10:36:28] [hem]     20 hospitals, 1 pages
+[2026-06-22T10:36:28] [hem]   fetched 20
+[2026-06-22T10:36:28] [hem]   saved partial (36618 total)
+[2026-06-22T10:36:29] [hem] --- NDRF (88) ---
+[2026-06-22T10:36:29] [hem]     0 hospitals, 0 pages
+[2026-06-22T10:36:29] [hem]   fetched 0
+[2026-06-22T10:36:29] [hem]   saved partial (36618 total)
+[2026-06-22T10:36:29] [hem] --- NAMASTE (89) ---
+[2026-06-22T10:36:30] [hem]     0 hospitals, 0 pages
+[2026-06-22T10:36:30] [hem]   fetched 0
+[2026-06-22T10:36:30] [hem]   saved partial (36618 total)
+[2026-06-22T10:36:30] [hem] --- PM-CARES (95) ---
+[2026-06-22T10:36:31] [hem]     0 hospitals, 0 pages
+[2026-06-22T10:36:31] [hem]   fetched 0
+[2026-06-22T10:36:31] [hem]   saved partial (36618 total)
+[2026-06-22T10:36:31] [hem] --- SMILE (96) ---
+[2026-06-22T10:36:32] [hem]     0 hospitals, 0 pages
+[2026-06-22T10:36:32] [hem]   fetched 0
+[2026-06-22T10:36:32] [hem]   saved partial (36618 total)
+[2026-06-22T10:36:32] [hem] --- PM RAHAT (97) ---
+[2026-06-22T10:36:32] [hem]     0 hospitals, 0 pages
+[2026-06-22T10:36:32] [hem]   fetched 0
+[2026-06-22T10:36:33] [hem]   saved partial (36618 total)
+[2026-06-22T10:36:33] [hem] --- NHA (99) ---
+[2026-06-22T10:36:33] [hem]     0 hospitals, 0 pages
+[2026-06-22T10:36:33] [hem]   fetched 0
+[2026-06-22T10:36:33] [hem]   saved partial (36618 total)
+[2026-06-22T10:36:34] [hem] DONE. 36618 unique hospitals written to hem_raw.json
+[2026-06-22T10:36:34] [hem] By state (top 10):
+[2026-06-22T10:36:34] [hem]   UTTAR PRADESH                            6413
+[2026-06-22T10:36:34] [hem]   MAHARASHTRA                              4886
+[2026-06-22T10:36:34] [hem]   KARNATAKA                                3581
+[2026-06-22T10:36:34] [hem]   ANDHRA PRADESH                           2476
+[2026-06-22T10:36:34] [hem]   TAMIL NADU                               2316
+[2026-06-22T10:36:34] [hem]   GUJARAT                                  1980
+[2026-06-22T10:36:34] [hem]   RAJASTHAN                                1909
+[2026-06-22T10:36:34] [hem]   MADHYA PRADESH                           1885
+[2026-06-22T10:36:34] [hem]   CHHATTISGARH                             1705
+[2026-06-22T10:36:34] [hem]   TELANGANA                                1526
+[2026-06-22T10:36:34] [hem] Missing state name: 0
+[2026-06-22T10:36:34] [hem] Missing district name: 177
