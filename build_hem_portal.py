@@ -1,22 +1,24 @@
 """
-Build hospitals_hem.csv with HEM portal's exact 24-column format
-================================================================
+Build hospitals_hem.csv in the user-specified 37-column format
+=============================================================
 
-Columns (exact order, exactly as specified):
-  Hospital Id, Facility Id, Hosp Name, Hospital Type Name, Hosp Type Code,
-  State Name, State Code, District Name, District Code, Hosp Address,
-  Hosp Mobile Number, Hosp Contact Number, Speciality Name, Speciality Code,
-  Type, Empaneled Date, Establishment Year, Deempanel Status, Gc Status,
-  Enrl Status, Hosp Rating, Hosp Latitude, Hosp Longitude,
-  Created Date, Updated Date
+Columns (exact order, exactly as specified by user):
+  Hospital Name, Hospital ID (UUID), Accreditation, Address, Emergency Numbers,
+  Ambulance Phone No, Bloodbank Phone No, Emergency Services, Facilities,
+  Foreign Pcare, Helpline, Hospital Care Type, Hospital Category, Hospital Fax,
+  Hospital Primary Email, Hospital Secondary Email, Latitude, Longitude,
+  Location, Miscellaneous Facilities, Mobile Number, Nodal Person Email,
+  Nodal Person Info, Nodal Person Tele, Number of Beds (Eco Weaker Sec),
+  Doctors Available, Private Wards, Pincode, Website, State, Subdistrict,
+  Town, Village, Timezone, Insurance Companies, Specialty, Sub -Specialty
 
 Reads:
-  - hem_raw.json          (output of scrape_hem_portal.py: dict[hospitalId] -> HEM row)
+  - hem_raw.json         (output of scrape_hem_portal.py: dict[hospitalId] -> HEM row)
   - hem_specialities.json (HEM speciality list, id -> name)
-  - hem_states.json       (state list + district list per state)
+  - hem_states.json      (state list + district list per state)
 
 Writes:
-  - hospitals_hem.csv     (24 columns, ~36k rows)
+  - hospitals_hem.csv     (37 columns, 36k rows)
   - hospitals_hem.json    (same)
 """
 
@@ -33,27 +35,29 @@ HEM_STATES = BASE_DIR / "hem_states.json"
 CSV_OUT = BASE_DIR / "hospitals_hem.csv"
 JSON_OUT = BASE_DIR / "hospitals_hem.json"
 
-# EXACT column order
 COLUMNS = [
-    "Hospital Id", "Facility Id", "Hosp Name", "Hospital Type Name", "Hosp Type Code",
-    "State Name", "State Code", "District Name", "District Code", "Hosp Address",
-    "Hosp Mobile Number", "Hosp Contact Number", "Speciality Name", "Speciality Code",
-    "Type", "Empaneled Date", "Establishment Year", "Deempanel Status", "Gc Status",
-    "Enrl Status", "Hosp Rating", "Hosp Latitude", "Hosp Longitude",
-    "Created Date", "Updated Date",
+    "Hospital Name", "Hospital ID (UUID)", "Accreditation", "Address",
+    "Emergency Numbers", "Ambulance Phone No", "Bloodbank Phone No",
+    "Emergency Services", "Facilities", "Foreign Pcare", "Helpline",
+    "Hospital Care Type", "Hospital Category", "Hospital Fax",
+    "Hospital Primary Email", "Hospital Secondary Email", "Latitude", "Longitude",
+    "Location", "Miscellaneous Facilities", "Mobile Number",
+    "Nodal Person Email", "Nodal Person Info", "Nodal Person Tele",
+    "Number of Beds (Eco Weaker Sec)", "Doctors Available", "Private Wards",
+    "Pincode", "Website", "State", "Subdistrict", "Town", "Village",
+    "Timezone", "Insurance Companies", "Specialty", "Sub -Specialty",
 ]
 
-# hospTypeCode -> Hospital Type Name
+# hospTypeCode -> Hospital Care Type
 TYPE_NAME_MAP = {
     "G": "Public",
-    "P": "Private",
+    "P": "Private (For Profit)",
     "N": "NABH Accredited",
     "D": "De-Empaneled",
 }
 
 
 def clean(v):
-    """Normalize null-like values to empty string."""
     if v is None:
         return ""
     s = str(v).strip()
@@ -78,7 +82,7 @@ def load_lookups():
 
 
 def hem_to_row(h: dict, spec_by_id: dict[str, str]) -> dict[str, str]:
-    """Map a single HEM row to the 24-column output schema."""
+    """Map a single HEM row to the 37-column output schema."""
     spec_codes_raw = clean(h.get("specialityCode"))
     spec_names: list[str] = []
     if spec_codes_raw:
@@ -90,33 +94,49 @@ def hem_to_row(h: dict, spec_by_id: dict[str, str]) -> dict[str, str]:
             spec_names.append(name if name else code)
 
     tcode = clean(h.get("hospTypeCode"))
-    row = {
-        "Hospital Id": clean(h.get("hospitalId")),
-        "Facility Id": clean(h.get("facilityId")),
-        "Hosp Name": clean(h.get("hospName")),
-        "Hospital Type Name": TYPE_NAME_MAP.get(tcode, tcode),
-        "Hosp Type Code": tcode,
-        "State Name": clean(h.get("_stateName")) or clean(h.get("stateName")),
-        "State Code": clean(h.get("stateCode")),
-        "District Name": clean(h.get("_districtName")) or clean(h.get("districtName")),
-        "District Code": clean(h.get("districtCode")),
-        "Hosp Address": clean(h.get("hospAddress")),
-        "Hosp Mobile Number": clean(h.get("hospMobileNumber")),
-        "Hosp Contact Number": clean(h.get("hospContactNumber")),
-        "Speciality Name": ", ".join(spec_names),
-        "Speciality Code": spec_codes_raw,
-        "Type": clean(h.get("type")),
-        "Empaneled Date": clean(h.get("empaneledDate")),
-        "Establishment Year": clean(h.get("establishmentYear")),
-        "Deempanel Status": clean(h.get("deempanelStatus")),
-        "Gc Status": clean(h.get("gcStatus")),
-        "Enrl Status": clean(h.get("enrlStatus")),
-        "Hosp Rating": clean(h.get("hospRating")),
-        "Hosp Latitude": clean(h.get("hospLatitude")),
-        "Hosp Longitude": clean(h.get("hospLongitude")),
-        "Created Date": clean(h.get("createdDate")),
-        "Updated Date": clean(h.get("updatedDate")),
-    }
+    city = clean(h.get("hospCity"))
+    addr = clean(h.get("hospAddress"))
+    full_address = ", ".join(p for p in [addr, city] if p)
+
+    row = {c: "" for c in COLUMNS}
+    row["Hospital Name"] = clean(h.get("hospName"))
+    row["Hospital ID (UUID)"] = clean(h.get("facilityId")) or clean(h.get("hospitalId"))
+    # Accreditation
+    acc = clean(h.get("accredited"))
+    if acc:
+        row["Accreditation"] = "NABH Accredited" if acc.upper() == "Y" else "Not Accredited"
+    row["Address"] = full_address
+    # Emergency Numbers / Ambulance Phone No / Bloodbank Phone No / Emergency Services /
+    # Facilities / Foreign Pcare / Hospital Fax / Hospital Secondary Email /
+    # Miscellaneous Facilities / Number of Beds / Doctors Available / Private Wards
+    # — HEM does not expose these; left empty.
+    row["Helpline"] = clean(h.get("hospContactNumber"))
+    row["Hospital Care Type"] = TYPE_NAME_MAP.get(tcode, tcode)
+    if tcode == "G":
+        row["Hospital Category"] = "Government"
+    elif tcode in ("P", "N"):
+        row["Hospital Category"] = "Private"
+    row["Hospital Primary Email"] = clean(h.get("hospEmailId"))
+    row["Latitude"] = clean(h.get("hospLatitude"))
+    row["Longitude"] = clean(h.get("hospLongitude"))
+    row["Location"] = clean(h.get("hospAddress"))
+    row["Mobile Number"] = clean(h.get("hospMobileNumber"))
+    # Nodal Person Email
+    np_email = clean(h.get("nodalOfficerEmailId")) or clean(h.get("nodalOfficerEmail"))
+    row["Nodal Person Email"] = np_email
+    row["Nodal Person Info"] = clean(h.get("nodalOfficerName"))
+    row["Nodal Person Tele"] = clean(h.get("nodalOfficerNumber"))
+    pin = clean(h.get("hospPin"))
+    row["Pincode"] = pin
+    row["Website"] = clean(h.get("hospWebsite"))
+    row["State"] = clean(h.get("_stateName"))
+    row["Subdistrict"] = clean(h.get("_districtName"))
+    row["Town"] = city
+    row["Village"] = ""
+    row["Timezone"] = "Asia/Kolkata"
+    row["Insurance Companies"] = clean(h.get("schemeCode"))
+    row["Specialty"] = ", ".join(spec_names)
+    row["Sub -Specialty"] = ""
     return row
 
 
@@ -150,17 +170,17 @@ def main():
     print(f"Wrote {JSON_OUT.name}")
 
     total = len(rows)
-    print("\n--- Field coverage (24-column HEM CSV) ---")
+    print("\n--- Field coverage (37-column HEM CSV) ---")
     for col in COLUMNS:
         filled_n = sum(1 for r in rows if (r.get(col) or "").strip())
-        print(f"  {col:25s} {filled_n:6d}/{total} ({100*filled_n/total:5.1f}%)")
+        print(f"  {col:35s} {filled_n:6d}/{total} ({100*filled_n/total:5.1f}%)")
 
     by_state: dict[str, int] = {}
     missing_state = 0
     missing_district = 0
     for r in rows:
-        s = r.get("State Name", "") or "?"
-        d = r.get("District Name", "") or "?"
+        s = r.get("State", "") or "?"
+        d = r.get("Subdistrict", "") or "?"
         by_state[s] = by_state.get(s, 0) + 1
         if not s or s == "?":
             missing_state += 1
